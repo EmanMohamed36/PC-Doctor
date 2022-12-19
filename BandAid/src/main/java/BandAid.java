@@ -445,6 +445,8 @@ public class BandAid extends javax.swing.JFrame {
 
     private void jbtnShortnessOfBreathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnShortnessOfBreathActionPerformed
         // TODO add your handling code here:
+        jtxtYouShouldDo.setText("1-Stand behind the injured person.\n2- Place one foot slightly in front of the other for balance.");
+        
     }//GEN-LAST:event_jbtnShortnessOfBreathActionPerformed
 
     private void jbtnEpilepticFitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEpilepticFitActionPerformed
@@ -473,8 +475,12 @@ public class BandAid extends javax.swing.JFrame {
 
     private void jbtnSevereBleedingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSevereBleedingActionPerformed
         // TODO add your handling code here:
-        jtxtYouShouldDo.setText("1-");
-        
+        jtxtYouShouldDo.setText("1-Remove clothing or dirt from the wound area.\n2-Place a sterile bandage or piece of clean cloth over the wound.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3-Press the bandage firmly with the palm of your hand to control bleeding.\n4-Secure the dressing with tape or maintain pressure with your hands.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5-Immobilize the affected body part as much as possible.");
+        jtxtYouShouldNotDo.setText("1-remove large or deeply embedded objects.\n2-examine the wound and do not attempt to clean it either.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3-press directly on the eye wound or on the object that is embedded in it.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- remove the gauze or bandage ,If blood leaks through the gauze or cloth on the wound,\n place another medical dressing over it, and keep pressing firmly on the wound.");
     }//GEN-LAST:event_jbtnSevereBleedingActionPerformed
 
     /**
