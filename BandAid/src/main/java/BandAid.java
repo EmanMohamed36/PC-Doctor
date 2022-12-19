@@ -180,6 +180,11 @@ public class BandAid extends javax.swing.JFrame {
         jbtnBurns.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jbtnBurns.setForeground(new java.awt.Color(0, 0, 0));
         jbtnBurns.setText("Burns");
+        jbtnBurns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnBurnsActionPerformed(evt);
+            }
+        });
 
         jPanel7.setBackground(new java.awt.Color(153, 153, 153));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 7));
@@ -230,11 +235,13 @@ public class BandAid extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jtxtYouShouldNotDo.setEditable(false);
         jtxtYouShouldNotDo.setColumns(20);
         jtxtYouShouldNotDo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtxtYouShouldNotDo.setRows(5);
         jScrollPane1.setViewportView(jtxtYouShouldNotDo);
 
+        jtxtYouShouldDo.setEditable(false);
         jtxtYouShouldDo.setColumns(20);
         jtxtYouShouldDo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtxtYouShouldDo.setRows(5);
@@ -323,7 +330,7 @@ public class BandAid extends javax.swing.JFrame {
         jbtnPcDoctor.setBackground(new java.awt.Color(255, 255, 255));
         jbtnPcDoctor.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jbtnPcDoctor.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnPcDoctor.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\Logo.jpg")); // NOI18N
+        jbtnPcDoctor.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\Logo.jpg")); // NOI18N
         jbtnPcDoctor.setText("  PC Doctor");
         jbtnPcDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,7 +341,7 @@ public class BandAid extends javax.swing.JFrame {
         jbtnMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jbtnMedicines.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jbtnMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnMedicines.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\Medicines.png")); // NOI18N
+        jbtnMedicines.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\Medicines.png")); // NOI18N
         jbtnMedicines.setText("  Medicines");
         jbtnMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -345,7 +352,7 @@ public class BandAid extends javax.swing.JFrame {
         jbtnBandAid.setBackground(new java.awt.Color(255, 255, 255));
         jbtnBandAid.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jbtnBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnBandAid.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\BandAid.png")); // NOI18N
+        jbtnBandAid.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\BandAid.png")); // NOI18N
         jbtnBandAid.setText("  Band Aid");
         jbtnBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,7 +363,7 @@ public class BandAid extends javax.swing.JFrame {
         jbtnFood.setBackground(new java.awt.Color(255, 255, 255));
         jbtnFood.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jbtnFood.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnFood.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\Food.png")); // NOI18N
+        jbtnFood.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\Food.png")); // NOI18N
         jbtnFood.setText("  Food");
         jbtnFood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -451,6 +458,18 @@ public class BandAid extends javax.swing.JFrame {
 
     private void jbtnEpilepticFitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEpilepticFitActionPerformed
         // TODO add your handling code here:
+        jtxtYouShouldDo.setText("1- Note the depletion in the shift.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "2- Protect people with seizures by removing any harmful objects near them and keeping them away from danger sources such as the stairs.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Dimensions of the glasses the patient used.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "4- Support the person's head to prevent him from hitting the ground by placing a piece of cloth or a jacket.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- If the seizure lasts more than 5 minutes or more, an ambulance should be called.\n");
+        
+        jtxtYouShouldNotDo.setText("1- Immobilization of the patient when he had a seizure.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "2- Do not gather around the injured person.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3- Placing any object in the mouth of the injured person or between his teeth.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- Attempting to move the injured person during the seizure.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "5- Do not panic and assume that the casualty knows what is happening or what has happened.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "6- Giving the injured person any kind of food or drink until he fully recovers.\n");
     }//GEN-LAST:event_jbtnEpilepticFitActionPerformed
 
     private void jbtnFaintingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnFaintingActionPerformed
@@ -482,6 +501,24 @@ public class BandAid extends javax.swing.JFrame {
         jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3-press directly on the eye wound or on the object that is embedded in it.\n");
         jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- remove the gauze or bandage ,If blood leaks through the gauze or cloth on the wound,\n place another medical dressing over it, and keep pressing firmly on the wound.");
     }//GEN-LAST:event_jbtnSevereBleedingActionPerformed
+
+    private void jbtnBurnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBurnsActionPerformed
+        // TODO add your handling code here:
+        jtxtYouShouldDo.setText("1- Protect the injured person from harm.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "2- Remove jewelry, belts, etc., especially around burned areas such as the neck.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Take a pain reliever if necessary to relieve pain.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "4- Cover the burn area with a damp bandage or a clean, cool cloth.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- Cover open blisters with a dry, sterile bandage.\n");
+        
+        jtxtYouShouldNotDo.setText("1- Remove burnt clothing stuck to the skin.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "2- Cover the burn with an adhesive bandage.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3- Place large burn areas in cold water to avoid trauma to the injured person.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- Use ice directly on the burnt area.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "5- Applying any ointments, butter, toothpaste, or other remedies to the burn.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "6- Touching or opening the blisters resulting from the burn.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "7- Putting thin cotton on the affected area, which may irritate the skin.\n");
+        
+    }//GEN-LAST:event_jbtnBurnsActionPerformed
 
     /**
      * @param args the command line arguments
