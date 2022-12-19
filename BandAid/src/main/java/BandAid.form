@@ -675,7 +675,7 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\&#x645;&#x64a;&#x646;&#x627;&#x645;&#x62c;&#x62f;&#x649;&#x62a;&#x642;&#x627;&#x648;&#x649;&#x639;&#x637;&#x627;&#x627;&#x644;&#x644;&#x647;\Downloads\WhatsApp Image 2022-12-19 at 9.56.51 PM (1).jpg"/>
+              <Image iconType="2" name="C:\Users\EmanMohamed\Documents\NetBeansProjects\PC-Doctor\images\Logo.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="  PC Doctor"/>
           </Properties>
@@ -695,7 +695,7 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\&#x645;&#x64a;&#x646;&#x627;&#x645;&#x62c;&#x62f;&#x649;&#x62a;&#x642;&#x627;&#x648;&#x649;&#x639;&#x637;&#x627;&#x627;&#x644;&#x644;&#x647;\Downloads\291d2b773dd40223a3cb9ed4ff047ace (1).png"/>
+              <Image iconType="2" name="C:\Users\EmanMohamed\Documents\NetBeansProjects\PC-Doctor\images\Medicines.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="  Medicines"/>
           </Properties>
@@ -715,7 +715,7 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\&#x645;&#x64a;&#x646;&#x627;&#x645;&#x62c;&#x62f;&#x649;&#x62a;&#x642;&#x627;&#x648;&#x649;&#x639;&#x637;&#x627;&#x627;&#x644;&#x644;&#x647;\Downloads\c96fa85b36f3a9751f4365e93f810709 (1).png"/>
+              <Image iconType="2" name="C:\Users\EmanMohamed\Documents\NetBeansProjects\PC-Doctor\images\BandAid.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="  Band Aid"/>
           </Properties>
@@ -735,7 +735,7 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\&#x645;&#x64a;&#x646;&#x627;&#x645;&#x62c;&#x62f;&#x649;&#x62a;&#x642;&#x627;&#x648;&#x649;&#x639;&#x637;&#x627;&#x627;&#x644;&#x644;&#x647;\Downloads\afe99595c27fc9420e81250f71a6001f (1).png"/>
+              <Image iconType="2" name="C:\Users\EmanMohamed\Documents\NetBeansProjects\PC-Doctor\images\Food.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="  Food"/>
           </Properties>

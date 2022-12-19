@@ -318,7 +318,7 @@ public class BandAid extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 0, 0));
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\مينامجدىتقاوىعطاالله\\Downloads\\WhatsApp Image 2022-12-19 at 9.56.51 PM (1).jpg")); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\Logo.jpg")); // NOI18N
         jButton5.setText("  PC Doctor");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,7 +329,7 @@ public class BandAid extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton6.setForeground(new java.awt.Color(0, 0, 0));
-        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\مينامجدىتقاوىعطاالله\\Downloads\\291d2b773dd40223a3cb9ed4ff047ace (1).png")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\Medicines.png")); // NOI18N
         jButton6.setText("  Medicines");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,7 +340,7 @@ public class BandAid extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton7.setForeground(new java.awt.Color(0, 0, 0));
-        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\مينامجدىتقاوىعطاالله\\Downloads\\c96fa85b36f3a9751f4365e93f810709 (1).png")); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\BandAid.png")); // NOI18N
         jButton7.setText("  Band Aid");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,7 +351,7 @@ public class BandAid extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(255, 255, 255));
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton8.setForeground(new java.awt.Color(0, 0, 0));
-        jButton8.setIcon(new javax.swing.ImageIcon("C:\\Users\\مينامجدىتقاوىعطاالله\\Downloads\\afe99595c27fc9420e81250f71a6001f (1).png")); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon("C:\\Users\\EmanMohamed\\Documents\\NetBeansProjects\\PC-Doctor\\images\\Food.png")); // NOI18N
         jButton8.setText("  Food");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -521,18 +521,13 @@ public class BandAid extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jDiabeticBleeding;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -540,7 +535,6 @@ public class BandAid extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
