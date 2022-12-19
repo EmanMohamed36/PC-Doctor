@@ -180,6 +180,11 @@ public class BandAid extends javax.swing.JFrame {
         jbtnBurns.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jbtnBurns.setForeground(new java.awt.Color(0, 0, 0));
         jbtnBurns.setText("Burns");
+        jbtnBurns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnBurnsActionPerformed(evt);
+            }
+        });
 
         jPanel7.setBackground(new java.awt.Color(153, 153, 153));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 7));
@@ -230,11 +235,13 @@ public class BandAid extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jtxtYouShouldNotDo.setEditable(false);
         jtxtYouShouldNotDo.setColumns(20);
         jtxtYouShouldNotDo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtxtYouShouldNotDo.setRows(5);
         jScrollPane1.setViewportView(jtxtYouShouldNotDo);
 
+        jtxtYouShouldDo.setEditable(false);
         jtxtYouShouldDo.setColumns(20);
         jtxtYouShouldDo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtxtYouShouldDo.setRows(5);
@@ -444,17 +451,35 @@ public class BandAid extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnShortnessOfBreathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnShortnessOfBreathActionPerformed
-        // TODO add your handling code here:
-        jtxtYouShouldDo.setText("1-Stand behind the injured person.\n2- Place one foot slightly in front of the other for balance.");
+        //you should 
+        jtxtYouShouldDo.setText("1- Stand behind the injured person.\n2- Place one foot slightly in front of the other for balance.");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Wrap the arms around the injured person's waist.\n4- Lean the injured person forward slightly.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- Make a fist with the other hand, then place it above the navel area.\n6- Hold the fist with the other hand, then direct a strong pressure on the abdomen quickly upwards.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "7- Perform 6 to 10 abdominal pressures until the stuck object is removed.");
+        //you shouldn't
+        jtxtYouShouldNotDo.setText("1- any thing If the person is able to breathe hard, they should continue to cough.");
         
     }//GEN-LAST:event_jbtnShortnessOfBreathActionPerformed
 
     private void jbtnEpilepticFitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEpilepticFitActionPerformed
         // TODO add your handling code here:
+        
+        
+        
     }//GEN-LAST:event_jbtnEpilepticFitActionPerformed
 
     private void jbtnFaintingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnFaintingActionPerformed
-        // TODO add your handling code here:
+
+        
+        //you should
+        jtxtYouShouldDo.setText("1- Help the person lie on their back if the person is sitting in a chair.\n2- Roll the person to their side if they are unconscious, and check that they are breathing and have a regular heartbeat.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Elevate the person's feet about 30 cm above the level of the heart if possible to restore blood flow to the brain.\n4- Loosen collars, belts and other tight clothing if the fainting spell is caused by heat, and try to cool the person down by wiping them with a damp cloth or ventilating them\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- make sure there is plenty of fresh air and ask others to move away and open a window if the person is in a room. To make sure there is plenty of fresh air and ask others to move away and open the window if the person is in a room.\n6- Call the emergency number if the person does not regain consciousness within one minute.");
+        //you shouldn't
+        jtxtYouShouldNotDo.setText("1- make the fainting person get up after a short time, so that he does not faint again.\n");
+
+        
+        
     }//GEN-LAST:event_jbtnFaintingActionPerformed
 
     private void jbtnPcDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPcDoctorActionPerformed
@@ -474,14 +499,20 @@ public class BandAid extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnFoodActionPerformed
 
     private void jbtnSevereBleedingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSevereBleedingActionPerformed
-        // TODO add your handling code here:
-        jtxtYouShouldDo.setText("1-Remove clothing or dirt from the wound area.\n2-Place a sterile bandage or piece of clean cloth over the wound.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3-Press the bandage firmly with the palm of your hand to control bleeding.\n4-Secure the dressing with tape or maintain pressure with your hands.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5-Immobilize the affected body part as much as possible.");
-        jtxtYouShouldNotDo.setText("1-remove large or deeply embedded objects.\n2-examine the wound and do not attempt to clean it either.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3-press directly on the eye wound or on the object that is embedded in it.\n");
+        //you should
+        jtxtYouShouldDo.setText("1- Remove clothing or dirt from the wound area.\n2- Place a sterile bandage or piece of clean cloth over the wound.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Press the bandage firmly with the palm of your hand to control bleeding.\n4- Secure the dressing with tape or maintain pressure with your hands.\n");
+        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- Immobilize the affected body part as much as possible.");
+       //you shouldn't
+        jtxtYouShouldNotDo.setText("1- remove large or deeply embedded objects.\n2- examine the wound and do not attempt to clean it either.\n");
+        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3- press directly on the eye wound or on the object that is embedded in it.\n");
         jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- remove the gauze or bandage ,If blood leaks through the gauze or cloth on the wound,\n place another medical dressing over it, and keep pressing firmly on the wound.");
     }//GEN-LAST:event_jbtnSevereBleedingActionPerformed
+
+    private void jbtnBurnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBurnsActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jbtnBurnsActionPerformed
 
     /**
      * @param args the command line arguments
