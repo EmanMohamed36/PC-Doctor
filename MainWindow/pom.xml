@@ -18,4 +18,5 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>test.pc_doctor.PC_DOCTOR</exec.mainClass>
     </properties>
+    <name>MainWindow</name>
 </project>
