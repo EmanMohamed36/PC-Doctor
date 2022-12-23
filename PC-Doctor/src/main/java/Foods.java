@@ -26,14 +26,6 @@ public class Foods extends javax.swing.JFrame {
 
     public Foods() {
         initComponents();
-        //jbtnLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/Logo.png")));
-        // jFoods.setIcon(jFoods);
-        // java.net.URL Medicine = getClass().getResource("Medicine.png");
-        // Icon Medicine1 = new ImageIcon(Medicine);
-        // java.net.URL BandAid = getClass().getResource("BandAid.png");
-        // Icon BandAid1 = new ImageIcon(BandAid);
-        // java.net.URL Logo = getClass().getResource("Logo.png");
-        // Icon Logo1 = new ImageIcon(Logo);
     }
 
     /**
@@ -99,7 +91,7 @@ public class Foods extends javax.swing.JFrame {
         jPanel2.add(jTextSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 170, 40));
 
         jOkSearch.setBackground(new java.awt.Color(16, 18, 23));
-        jOkSearch.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/search.jpg")); // NOI18N
+        jOkSearch.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/search.jpg")); // NOI18N
         jOkSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jOkSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,7 +180,7 @@ public class Foods extends javax.swing.JFrame {
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
         jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
-        jbtnLogo.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Logo.jpg")); // NOI18N
         jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,7 +206,7 @@ public class Foods extends javax.swing.JFrame {
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jMedicines.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Medicines.png")); // NOI18N
+        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,7 +218,7 @@ public class Foods extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,7 +230,7 @@ public class Foods extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
-        jFoods.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Food.png")); // NOI18N
+        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -457,27 +449,4 @@ public class Foods extends javax.swing.JFrame {
     private javax.swing.JLabel jprotein;
     // End of variables declaration//GEN-END:variables
 
-//-----------------------------------------------------Icon---------------------------------------------------------------   
-    /*java.net.URL Food = getClass().getResource("Food.png");
-    Icon Food1 = new ImageIcon(Food);
-    java.net.URL Medicine = getClass().getResource("Medicine.png");
-    Icon Medicine1 = new ImageIcon(Medicine);
-    java.net.URL BandAid = getClass().getResource("BandAid.png");
-    Icon BandAid1 = new ImageIcon(BandAid);
-    java.net.URL Logo = getClass().getResource("Logo.png");
-    Icon Logo1 = new ImageIcon(Logo);*/
-
 }
-
-// java.net.URL alert = getClass().getResource("alert.jpg");
-// Icon alert1 = new ImageIcon(alert);
-// java.net.URL insuf = getClass().getResource("insuf.jpg");
-// Icon insuf1 = new ImageIcon(insuf);
-// java.net.URL inva = getClass().getResource("inva.jpg");
-// Icon inva1 = new ImageIcon(inva);
-// URL see = getClass().getResource("see.jpg");
-// Icon see1 = new ImageIcon(see);
-// java.net.URL tap = getClass().getResource("tap.jpg");
-// Icon tap1 = new ImageIcon(tap);
-// java.net.URL wel = getClass().getResource("wel.jpg");
-// Icon wel1 = new ImageIcon(wel);
