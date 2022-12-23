@@ -8,8 +8,9 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Mina Magdy
+ * @author EmanMohamed
  */
+
 public class BandAid extends javax.swing.JFrame {
 
     /**
@@ -44,7 +45,6 @@ public class BandAid extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jbtnEpilepticFit = new javax.swing.JButton();
         jbtnSevereBleeding = new javax.swing.JButton();
@@ -61,11 +61,17 @@ public class BandAid extends javax.swing.JFrame {
         jtxtYouShouldDo = new javax.swing.JTextArea();
         jPanel13 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jbtnPcDoctor = new javax.swing.JButton();
-        jbtnMedicines = new javax.swing.JButton();
-        jbtnBandAid = new javax.swing.JButton();
-        jbtnFood = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jbtnLogo = new javax.swing.JButton();
+        jbtnPC_Doctor = new javax.swing.JButton();
+        jMedicines = new javax.swing.JButton();
+        jBandAid = new javax.swing.JButton();
+        jFoods = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jfood = new javax.swing.JLabel();
 
         jDiabeticBleeding.setBackground(new java.awt.Color(204, 255, 255));
         jDiabeticBleeding.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -118,23 +124,29 @@ public class BandAid extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1460, 800));
+        setSize(new java.awt.Dimension(1352, 800));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1574, 822, 150, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 102, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 822, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 102, 102));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 822, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(51, 0, 51));
         jPanel5.setForeground(new java.awt.Color(51, 0, 51));
         jPanel5.setLayout(new java.awt.CardLayout());
-
-        jPanel6.setBackground(new java.awt.Color(57, 62, 70));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1418, 828, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbtnEpilepticFit.setBackground(new java.awt.Color(153, 153, 153));
         jbtnEpilepticFit.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -145,6 +157,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnEpilepticFitActionPerformed(evt);
             }
         });
+        jPanel4.add(jbtnEpilepticFit, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 400, 300, 40));
 
         jbtnSevereBleeding.setBackground(new java.awt.Color(153, 153, 153));
         jbtnSevereBleeding.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -155,6 +168,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnSevereBleedingActionPerformed(evt);
             }
         });
+        jPanel4.add(jbtnSevereBleeding, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 300, 40));
 
         jbtnShortnessOfBreath.setBackground(new java.awt.Color(153, 153, 153));
         jbtnShortnessOfBreath.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -165,6 +179,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnShortnessOfBreathActionPerformed(evt);
             }
         });
+        jPanel4.add(jbtnShortnessOfBreath, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 310, -1, 41));
 
         jbtnFainting.setBackground(new java.awt.Color(153, 153, 153));
         jbtnFainting.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -175,6 +190,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnFaintingActionPerformed(evt);
             }
         });
+        jPanel4.add(jbtnFainting, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 300, 40));
 
         jbtnBurns.setBackground(new java.awt.Color(153, 153, 153));
         jbtnBurns.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -185,6 +201,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnBurnsActionPerformed(evt);
             }
         });
+        jPanel4.add(jbtnBurns, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 580, 300, 40));
 
         jPanel7.setBackground(new java.awt.Color(153, 153, 153));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 7));
@@ -209,6 +226,8 @@ public class BandAid extends javax.swing.JFrame {
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jPanel4.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 22, -1, -1));
 
         jPanel9.setBackground(new java.awt.Color(153, 153, 153));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 7));
@@ -235,17 +254,23 @@ public class BandAid extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 111, -1, -1));
+
         jtxtYouShouldNotDo.setEditable(false);
         jtxtYouShouldNotDo.setColumns(20);
         jtxtYouShouldNotDo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtxtYouShouldNotDo.setRows(5);
         jScrollPane1.setViewportView(jtxtYouShouldNotDo);
 
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 464, 760, 243));
+
         jtxtYouShouldDo.setEditable(false);
         jtxtYouShouldDo.setColumns(20);
         jtxtYouShouldDo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jtxtYouShouldDo.setRows(5);
         jScrollPane3.setViewportView(jtxtYouShouldDo);
+
+        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 172, 760, 201));
 
         jPanel13.setBackground(new java.awt.Color(153, 153, 153));
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 7));
@@ -272,180 +297,90 @@ public class BandAid extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 922, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1))
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbtnEpilepticFit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnShortnessOfBreath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnSevereBleeding, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnFainting, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnBurns, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(12, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jbtnSevereBleeding, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(jbtnShortnessOfBreath, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbtnEpilepticFit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(jbtnFainting, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(jbtnBurns, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(149, 149, 149))))
-        );
+        jPanel4.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 391, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Band Aid");
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1140, 740));
 
-        jbtnPcDoctor.setBackground(new java.awt.Color(255, 255, 255));
-        jbtnPcDoctor.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jbtnPcDoctor.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnPcDoctor.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\Logo.jpg")); // NOI18N
-        jbtnPcDoctor.setText("  PC Doctor");
-        jbtnPcDoctor.addActionListener(new java.awt.event.ActionListener() {
+        jPanel6.setBackground(new java.awt.Color(57, 62, 70));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel8.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 113, -1, -1));
+        jPanel8.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
+
+        jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
+        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnPcDoctorActionPerformed(evt);
+                jbtnLogoActionPerformed(evt);
             }
         });
+        jPanel8.add(jbtnLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 110, 90));
 
-        jbtnMedicines.setBackground(new java.awt.Color(255, 255, 255));
-        jbtnMedicines.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jbtnMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnMedicines.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\Medicines.png")); // NOI18N
-        jbtnMedicines.setText("  Medicines");
-        jbtnMedicines.addActionListener(new java.awt.event.ActionListener() {
+        jbtnPC_Doctor.setBackground(new java.awt.Color(255, 255, 255));
+        jbtnPC_Doctor.setFont(new java.awt.Font("Chilanka", 1, 30)); // NOI18N
+        jbtnPC_Doctor.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnPC_Doctor.setText("PC Doctor");
+        jbtnPC_Doctor.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jbtnPC_Doctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnMedicinesActionPerformed(evt);
+                jbtnPC_DoctorActionPerformed(evt);
             }
         });
+        jPanel8.add(jbtnPC_Doctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 170, 50));
 
-        jbtnBandAid.setBackground(new java.awt.Color(255, 255, 255));
-        jbtnBandAid.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jbtnBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnBandAid.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\BandAid.png")); // NOI18N
-        jbtnBandAid.setText("  Band Aid");
-        jbtnBandAid.addActionListener(new java.awt.event.ActionListener() {
+        jPanel6.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 230, 180));
+
+        jMedicines.setBackground(new java.awt.Color(255, 255, 255));
+        jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jMedicines.setForeground(new java.awt.Color(0, 0, 0));
+        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Medicines.png")); // NOI18N
+        jMedicines.setText("  Medicines");
+        jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnBandAidActionPerformed(evt);
+                jMedicinesActionPerformed(evt);
             }
         });
+        jPanel6.add(jMedicines, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 270, 52));
 
-        jbtnFood.setBackground(new java.awt.Color(255, 255, 255));
-        jbtnFood.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jbtnFood.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnFood.setIcon(new javax.swing.ImageIcon("D:\\Coding\\Java\\PC-Doctor\\images\\Food.png")); // NOI18N
-        jbtnFood.setText("  Food");
-        jbtnFood.addActionListener(new java.awt.event.ActionListener() {
+        jBandAid.setBackground(new java.awt.Color(246, 249, 254));
+        jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jBandAid.setForeground(new java.awt.Color(0, 0, 0));
+        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setText("   Band Aid ");
+        jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnFoodActionPerformed(evt);
+                jBandAidActionPerformed(evt);
             }
         });
+        jPanel6.add(jBandAid, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 270, 49));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jbtnPcDoctor)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(663, 663, 663))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jbtnMedicines, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbtnBandAid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbtnFood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(164, 164, 164))))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jbtnPcDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbtnMedicines, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(59, 59, 59)
-                        .addComponent(jbtnBandAid, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(66, 66, 66)
-                        .addComponent(jbtnFood, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(255, 255, 255))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
-        );
+        jFoods.setBackground(new java.awt.Color(255, 255, 255));
+        jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jFoods.setForeground(new java.awt.Color(0, 0, 0));
+        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Food.png")); // NOI18N
+        jFoods.setText("    Foods      ");
+        jFoods.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFoodsActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jFoods, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 270, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1306, 1306, 1306)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 324, 800));
+
+        jPanel10.setBackground(new java.awt.Color(57, 62, 70));
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jfood.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jfood.setForeground(new java.awt.Color(255, 255, 255));
+        jfood.setText("Band Aid");
+        jPanel10.add(jfood, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
+
+        getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 1150, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -491,22 +426,6 @@ public class BandAid extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jbtnFaintingActionPerformed
 
-    private void jbtnPcDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPcDoctorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbtnPcDoctorActionPerformed
-
-    private void jbtnMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMedicinesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbtnMedicinesActionPerformed
-
-    private void jbtnBandAidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBandAidActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbtnBandAidActionPerformed
-
-    private void jbtnFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnFoodActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbtnFoodActionPerformed
-
     private void jbtnSevereBleedingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSevereBleedingActionPerformed
         //you should
         jtxtYouShouldDo.setText("1- Remove clothing or dirt from the wound area.\n2- Place a sterile bandage or piece of clean cloth over the wound.\n");
@@ -535,6 +454,26 @@ public class BandAid extends javax.swing.JFrame {
         jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "7- Putting thin cotton on the affected area, which may irritate the skin.\n");
         
     }//GEN-LAST:event_jbtnBurnsActionPerformed
+
+    private void jbtnLogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnLogoActionPerformed
+
+    private void jbtnPC_DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPC_DoctorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnPC_DoctorActionPerformed
+
+    private void jMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMedicinesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMedicinesActionPerformed
+
+    private void jBandAidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBandAidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBandAidActionPerformed
+
+    private void jFoodsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFoodsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFoodsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -576,19 +515,24 @@ public class BandAid extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBandAid;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jDiabeticBleeding;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jFoods;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton jMedicines;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -596,6 +540,7 @@ public class BandAid extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -603,15 +548,14 @@ public class BandAid extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JButton jbtnBandAid;
     private javax.swing.JButton jbtnBurns;
     private javax.swing.JButton jbtnEpilepticFit;
     private javax.swing.JButton jbtnFainting;
-    private javax.swing.JButton jbtnFood;
-    private javax.swing.JButton jbtnMedicines;
-    private javax.swing.JButton jbtnPcDoctor;
+    private javax.swing.JButton jbtnLogo;
+    private javax.swing.JButton jbtnPC_Doctor;
     private javax.swing.JButton jbtnSevereBleeding;
     private javax.swing.JButton jbtnShortnessOfBreath;
+    private javax.swing.JLabel jfood;
     private javax.swing.JTextArea jtxtYouShouldDo;
     private javax.swing.JTextArea jtxtYouShouldNotDo;
     // End of variables declaration//GEN-END:variables

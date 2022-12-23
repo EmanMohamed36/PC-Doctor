@@ -27,10 +27,10 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jbtnLogo = new javax.swing.JButton();
+        jbtnPC_Doctor = new javax.swing.JButton();
         jMedicines = new javax.swing.JButton();
         jBandAid = new javax.swing.JButton();
         jFoods = new javax.swing.JButton();
@@ -47,6 +47,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         setSize(new java.awt.Dimension(1352, 800));
 
         jPanel3.setBackground(new java.awt.Color(50, 224, 196));
@@ -55,23 +56,37 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Karumbi", 1, 52)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("PC Docter");
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, 40));
         jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 113, -1, -1));
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PcDoctor/src/main/java/com/images/Logo.jpg")); // NOI18N
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 90, 80));
+        jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
+        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnLogoActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jbtnLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 110, 90));
+
+        jbtnPC_Doctor.setBackground(new java.awt.Color(255, 255, 255));
+        jbtnPC_Doctor.setFont(new java.awt.Font("Chilanka", 1, 30)); // NOI18N
+        jbtnPC_Doctor.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnPC_Doctor.setText("PC Doctor");
+        jbtnPC_Doctor.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jbtnPC_Doctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnPC_DoctorActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jbtnPC_Doctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 170, 50));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 230, 180));
 
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Medicines.png")); // NOI18N
+        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +98,7 @@ public class MainWindow extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +110,7 @@ public class MainWindow extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
-        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Food.png")); // NOI18N
+        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,11 +128,11 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel1.setText("Welcome");
         jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, 120));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/doc.png")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/doc.png")); // NOI18N
         jPanel6.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 480, 480));
         jPanel6.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/email.jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/email.jpg")); // NOI18N
         jPanel6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 730, 70, 50));
         jPanel6.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 660, 40, 30));
 
@@ -141,7 +156,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel16.setOpaque(true);
         jPanel6.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 720, 400, 70));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/phone2.jpg")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/phone2.jpg")); // NOI18N
         jPanel6.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 720, 70, 70));
 
         jLabel17.setBackground(new java.awt.Color(234, 251, 248));
@@ -169,9 +184,8 @@ public class MainWindow extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(318, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 1130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 324, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 1136, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -206,6 +220,14 @@ public class MainWindow extends javax.swing.JFrame {
     private void jFoodsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFoodsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFoodsActionPerformed
+
+    private void jbtnLogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnLogoActionPerformed
+
+    private void jbtnPC_DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPC_DoctorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnPC_DoctorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,10 +274,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -263,5 +283,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JButton jbtnLogo;
+    private javax.swing.JButton jbtnPC_Doctor;
     // End of variables declaration//GEN-END:variables
 }

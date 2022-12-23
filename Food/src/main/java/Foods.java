@@ -47,19 +47,21 @@ public class Foods extends javax.swing.JFrame {
         jadvantage = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jbtnLogo = new javax.swing.JButton();
+        jbtnPC_Doctor = new javax.swing.JButton();
         jMedicines = new javax.swing.JButton();
         jBandAid = new javax.swing.JButton();
         jFoods = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1350, 800));
+        setPreferredSize(new java.awt.Dimension(1460, 800));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1352, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 103, 44));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jfood.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
@@ -70,6 +72,7 @@ public class Foods extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextSearch.setBackground(new java.awt.Color(255, 255, 255));
         jTextSearch.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jTextSearch.setBorder(null);
         jTextSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +83,8 @@ public class Foods extends javax.swing.JFrame {
         jPanel2.add(jTextSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 170, 40));
 
         jOkSearch.setBackground(new java.awt.Color(16, 18, 23));
-        jOkSearch.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/FOOD/src/main/java/com/images/search2.jpg")); // NOI18N
+        jOkSearch.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/Food/src/main/java/com/images/search2.jpg")); // NOI18N
+        jOkSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jOkSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jOkSearchActionPerformed(evt);
@@ -90,7 +94,7 @@ public class Foods extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 230, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 1060, 60));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 1150, 60));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setName(""); // NOI18N
@@ -100,16 +104,16 @@ public class Foods extends javax.swing.JFrame {
         jcalories.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jcalories.setForeground(new java.awt.Color(0, 0, 0));
         jcalories.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jcalories.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Calories", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(153, 103, 44)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(153, 103, 44))); // NOI18N
+        jcalories.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Calories", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(204, 0, 204))); // NOI18N
         jcalories.setOpaque(true);
         jPanel6.add(jcalories, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 280, 130));
 
         jname.setBackground(new java.awt.Color(204, 204, 204));
         jname.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jname.setForeground(new java.awt.Color(0, 0, 0));
+        jname.setForeground(new java.awt.Color(153, 0, 153));
         jname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jname.setText("Name ");
-        jname.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 103, 44), 2, true));
+        jname.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 102), 2, true));
         jname.setOpaque(true);
         jPanel6.add(jname, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 400, 60));
 
@@ -123,7 +127,7 @@ public class Foods extends javax.swing.JFrame {
         jfat.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jfat.setForeground(new java.awt.Color(0, 0, 0));
         jfat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jfat.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fat", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(153, 103, 44)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP)); // NOI18N
+        jfat.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fat", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP)); // NOI18N
         jfat.setOpaque(true);
         jPanel6.add(jfat, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 260, 280, 130));
 
@@ -131,7 +135,7 @@ public class Foods extends javax.swing.JFrame {
         jcarb.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jcarb.setForeground(new java.awt.Color(0, 0, 0));
         jcarb.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jcarb.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Carb", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(153, 103, 44)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(153, 103, 44))); // NOI18N
+        jcarb.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Carb", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
         jcarb.setOpaque(true);
         jPanel6.add(jcarb, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 280, 130));
 
@@ -139,37 +143,55 @@ public class Foods extends javax.swing.JFrame {
         jprotein.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jprotein.setForeground(new java.awt.Color(0, 0, 0));
         jprotein.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jprotein.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Protein", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(153, 103, 44)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP)); // NOI18N
+        jprotein.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Protein", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP)); // NOI18N
         jprotein.setOpaque(true);
         jPanel6.add(jprotein, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 280, 130));
 
+        jadvantage.setEditable(false);
         jadvantage.setBackground(new java.awt.Color(204, 204, 204));
         jadvantage.setColumns(20);
         jadvantage.setFont(new java.awt.Font("Fira Code", 0, 24)); // NOI18N
-        jadvantage.setForeground(new java.awt.Color(1, 1, 1));
+        jadvantage.setForeground(new java.awt.Color(0, 0, 0));
+        jadvantage.setLineWrap(true);
         jadvantage.setRows(5);
+        jadvantage.setWrapStyleWord(true);
+        jadvantage.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jadvantage);
 
-        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 1030, 170));
+        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 1030, 160));
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 60, 1060, 740));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 60, 1150, 750));
 
-        jPanel3.setBackground(new java.awt.Color(153, 103, 44));
+        jPanel3.setBackground(new java.awt.Color(102, 0, 102));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Karumbi", 1, 52)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("PC Docter");
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, 40));
         jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 113, -1, -1));
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/FOOD/src/main/java/com/images/Logo.jpg")); // NOI18N
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 90, 80));
+        jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
+        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnLogoActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jbtnLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 110, 90));
+
+        jbtnPC_Doctor.setBackground(new java.awt.Color(255, 255, 255));
+        jbtnPC_Doctor.setFont(new java.awt.Font("Chilanka", 1, 30)); // NOI18N
+        jbtnPC_Doctor.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnPC_Doctor.setText("PC Doctor");
+        jbtnPC_Doctor.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jbtnPC_Doctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnPC_DoctorActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jbtnPC_Doctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 170, 50));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 230, 180));
 
@@ -213,6 +235,14 @@ public class Foods extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtnLogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnLogoActionPerformed
+
+    private void jbtnPC_DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPC_DoctorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnPC_DoctorActionPerformed
 
     private void jMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMedicinesActionPerformed
         // TODO add your handling code here:
@@ -299,7 +329,7 @@ public class Foods extends javax.swing.JFrame {
                 }
             }
         }
-        return ((cb / a.length()) * 100) >= 65.0 ? ((cb / a.length()) * 100) : 0.0;
+        return ((cb / a.length()) * 100) >= 75.0 ? ((cb / a.length()) * 100) : 0.0;
     }
 
     public static class DataFoods {
@@ -330,7 +360,7 @@ public class Foods extends javax.swing.JFrame {
     public static List <DataFoods> dataFoods = new ArrayList<DataFoods>();
     // fill data
     public static void fillDataFoods() {
-        dataFoods.add(new DataFoods("apple", "52", "0.3", "13.8", "0.2", "Apples are rich in antioxidants, which may help protect against\nheart disease and cancer.\nThey're also a good source of fiber, which can help keep you\nregular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("apple", "52", "0.3", "13.8", "0.2", "Apples are rich in antioxidants, which may help protect against heart disease and cancer. They're also a good source of fiber, which can help keep you\nregular and lower your risk of heart disease and diabetes."));
         dataFoods.add(new DataFoods("banana", "89", "1.1", "23.0", "0.3", "Bananas are a good source of potassium, which can help lower\nblood pressure.\nThey're also a good source of fiber, which can help keep you\nregular and lower your risk of heart disease and diabetes."));
         dataFoods.add(new DataFoods("orange", "47", "0.9", "11.8", "0.1", "Oranges are a good source of vitamin C, which can help boost\nyour immune system.\nThey're also a good source of fiber, which can help keep you\nregular and lower your risk of heart disease and diabetes."));
         dataFoods.add(new DataFoods("grape", "69", "0.7", "18.1", "0.3", "Grapes are a good source of fiber, which can help keep you regular\nand lower your risk of heart disease and diabetes."));
@@ -382,10 +412,8 @@ public class Foods extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBandAid;
     private javax.swing.JButton jFoods;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JButton jMedicines;
     private javax.swing.JButton jOkSearch;
@@ -397,6 +425,8 @@ public class Foods extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextSearch;
     private javax.swing.JTextArea jadvantage;
+    private javax.swing.JButton jbtnLogo;
+    private javax.swing.JButton jbtnPC_Doctor;
     private javax.swing.JLabel jcalories;
     private javax.swing.JLabel jcarb;
     private javax.swing.JLabel jfat;

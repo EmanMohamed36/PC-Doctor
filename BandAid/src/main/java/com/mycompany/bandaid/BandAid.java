@@ -4,9 +4,10 @@
 
 package com.mycompany.bandaid;
 
+
 /**
  *
- * @author Mina Magdy
+ * @author EmanMohamed
  */
 public class BandAid {
 
