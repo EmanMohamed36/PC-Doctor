@@ -1,5 +1,8 @@
 
 import javax.swing.JFrame;
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -313,7 +316,7 @@ public class BandAid extends javax.swing.JFrame {
         jPanel8.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
         jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
-        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Logo.jpg")); // NOI18N
         jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,7 +342,7 @@ public class BandAid extends javax.swing.JFrame {
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Medicines.png")); // NOI18N
+        jMedicines.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,7 +354,7 @@ public class BandAid extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -363,7 +366,7 @@ public class BandAid extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
-        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Food.png")); // NOI18N
+        jFoods.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -388,72 +391,181 @@ public class BandAid extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnShortnessOfBreathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnShortnessOfBreathActionPerformed
+        File doFile = new File(MainWindow.prefixPath + "/src/main/java/files/breathdo.txt");
+        File notFile = new File(MainWindow.prefixPath + "/src/main/java/files/breathnot.txt");
+        Scanner sc;
+        
         //you should 
-        jtxtYouShouldDo.setText("1- Stand behind the injured person.\n2- Place one foot slightly in front of the other for balance.");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Wrap the arms around the injured person's waist.\n4- Lean the injured person forward slightly.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- Make a fist with the other hand, then place it above the navel area.\n6- Hold the fist with the other hand, then direct a strong pressure on the abdomen quickly upwards.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "7- Perform 6 to 10 abdominal pressures until the stuck object is removed.");
-        //you shouldn't
-        jtxtYouShouldNotDo.setText("1- any thing If the person is able to breathe hard, they should continue to cough.");
+        try {
+            sc = new Scanner(doFile);
+            String data;
+            jtxtYouShouldDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read breath do file");
+        }
+        
+        //you shouldn't do
+        try {
+            sc = new Scanner(notFile);
+            String data;
+            jtxtYouShouldNotDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read breath not file");
+        }
         
     }//GEN-LAST:event_jbtnShortnessOfBreathActionPerformed
 
     private void jbtnEpilepticFitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEpilepticFitActionPerformed
         // TODO add your handling code here:
-        jtxtYouShouldDo.setText("1- Note the depletion in the shift.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "2- Protect people with seizures by removing any harmful objects near them and keeping them away from danger sources such as the stairs.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Dimensions of the glasses the patient used.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "4- Support the person's head to prevent him from hitting the ground by placing a piece of cloth or a jacket.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- If the seizure lasts more than 5 minutes or more, an ambulance should be called.\n");
+        File doFile = new File(MainWindow.prefixPath + "/src/main/java/files/epilepticdo.txt");
+        File notFile = new File(MainWindow.prefixPath + "/src/main/java/files/epilepticnot.txt");
+        Scanner sc;
         
-        jtxtYouShouldNotDo.setText("1- Immobilization of the patient when he had a seizure.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "2- Do not gather around the injured person.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3- Placing any object in the mouth of the injured person or between his teeth.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- Attempting to move the injured person during the seizure.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "5- Do not panic and assume that the casualty knows what is happening or what has happened.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "6- Giving the injured person any kind of food or drink until he fully recovers.\n");
+        //you should 
+        try {
+            sc = new Scanner(doFile);
+            String data;
+            jtxtYouShouldDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Epileptic do file");
+        }
+        
+        //you shouldn't do
+        try {
+            sc = new Scanner(notFile);
+            String data;
+            jtxtYouShouldNotDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Epileptic not file");
+        }
+        
     }//GEN-LAST:event_jbtnEpilepticFitActionPerformed
 
     private void jbtnFaintingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnFaintingActionPerformed
-
+        File doFile = new File(MainWindow.prefixPath + "/src/main/java/files/faintingdo.txt");
+        File notFile = new File(MainWindow.prefixPath + "/src/main/java/files/faintingnot.txt");
+        Scanner sc;
         
-        //you should
-        jtxtYouShouldDo.setText("1- Help the person lie on their back if the person is sitting in a chair.\n2- Roll the person to their side if they are unconscious, and check that they are breathing and have a regular heartbeat.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Elevate the person's feet about 30 cm above the level of the heart if possible to restore blood flow to the brain.\n4- Loosen collars, belts and other tight clothing if the fainting spell is caused by heat, and try to cool the person down by wiping them with a damp cloth or ventilating them\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- make sure there is plenty of fresh air and ask others to move away and open a window if the person is in a room. To make sure there is plenty of fresh air and ask others to move away and open the window if the person is in a room.\n6- Call the emergency number if the person does not regain consciousness within one minute.");
-        //you shouldn't
-        jtxtYouShouldNotDo.setText("1- make the fainting person get up after a short time, so that he does not faint again.\n");
-
+        //you should 
+        try {
+            sc = new Scanner(doFile);
+            String data;
+            jtxtYouShouldDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Fainting do file");
+        }
+        
+        //you shouldn't do
+        try {
+            sc = new Scanner(notFile);
+            String data;
+            jtxtYouShouldNotDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Fainting not file");
+        }
         
         
     }//GEN-LAST:event_jbtnFaintingActionPerformed
 
     private void jbtnSevereBleedingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSevereBleedingActionPerformed
         //you should
-        jtxtYouShouldDo.setText("1- Remove clothing or dirt from the wound area.\n2- Place a sterile bandage or piece of clean cloth over the wound.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Press the bandage firmly with the palm of your hand to control bleeding.\n4- Secure the dressing with tape or maintain pressure with your hands.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- Immobilize the affected body part as much as possible.");
-       //you shouldn't
-        jtxtYouShouldNotDo.setText("1- remove large or deeply embedded objects.\n2- examine the wound and do not attempt to clean it either.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3- press directly on the eye wound or on the object that is embedded in it.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- remove the gauze or bandage ,If blood leaks through the gauze or cloth on the wound,\n place another medical dressing over it, and keep pressing firmly on the wound.");
+        File doFile = new File(MainWindow.prefixPath + "/src/main/java/files/bleedingdo.txt");
+        File notFile = new File(MainWindow.prefixPath + "/src/main/java/files/bleedingnot.txt");
+        Scanner sc;
+        
+        //you should 
+        try {
+            sc = new Scanner(doFile);
+            String data;
+            jtxtYouShouldDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Bleeding do file");
+        }
+        
+        //you shouldn't do
+        try {
+            sc = new Scanner(notFile);
+            String data;
+            jtxtYouShouldNotDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Bleeding not file");
+        }
+        
     }//GEN-LAST:event_jbtnSevereBleedingActionPerformed
 
     private void jbtnBurnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBurnsActionPerformed
         // TODO add your handling code here:
-        jtxtYouShouldDo.setText("1- Protect the injured person from harm.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "2- Remove jewelry, belts, etc., especially around burned areas such as the neck.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "3- Take a pain reliever if necessary to relieve pain.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "4- Cover the burn area with a damp bandage or a clean, cool cloth.\n");
-        jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + "5- Cover open blisters with a dry, sterile bandage.\n");
+        File doFile = new File(MainWindow.prefixPath + "/src/main/java/files/burnsdo.txt");
+        File notFile = new File(MainWindow.prefixPath + "/src/main/java/files/burnsnot.txt");
+        Scanner sc;
         
-        jtxtYouShouldNotDo.setText("1- Remove burnt clothing stuck to the skin.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "2- Cover the burn with an adhesive bandage.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "3- Place large burn areas in cold water to avoid trauma to the injured person.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "4- Use ice directly on the burnt area.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "5- Applying any ointments, butter, toothpaste, or other remedies to the burn.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "6- Touching or opening the blisters resulting from the burn.\n");
-        jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + "7- Putting thin cotton on the affected area, which may irritate the skin.\n");
+        //you should 
+        try {
+            sc = new Scanner(doFile);
+            String data;
+            jtxtYouShouldDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldDo.setText(jtxtYouShouldDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Burns do file");
+        }
+        
+        //you shouldn't do
+        try {
+            sc = new Scanner(notFile);
+            String data;
+            jtxtYouShouldNotDo.setText("");
+            while (sc.hasNextLine()) {
+                data = sc.nextLine();
+                jtxtYouShouldNotDo.setText(jtxtYouShouldNotDo.getText() + data + "\n");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Error when read Burns not file");
+        }
         
     }//GEN-LAST:event_jbtnBurnsActionPerformed
 
