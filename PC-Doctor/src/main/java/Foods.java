@@ -389,7 +389,7 @@ public class Foods extends javax.swing.JFrame {
     public static List <DataFoods> dataFoods = new ArrayList<DataFoods>();
 
     public static void fillDataFoods() {
-        File file = new File("C:\\Users\\connect\\Desktop\\PC-Doctor-main\\PC-Doctor\\src\\main\\java\\Files\\Foods.txt");
+        File file = new File("F:\\PC-Doctor\\PC-Doctor\\src\\main\\java\\Files\\Foods.txt");
         try {
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
