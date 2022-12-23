@@ -3,11 +3,12 @@ import java.util.*;
 import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-
+import java.io.File;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+import java.io.FileNotFoundException;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -386,49 +387,20 @@ public class Foods extends javax.swing.JFrame {
     }
 
     public static List <DataFoods> dataFoods = new ArrayList<DataFoods>();
-    // fill data
+
     public static void fillDataFoods() {
-        dataFoods.add(new DataFoods("apple", "52", "0.3", "13.8", "0.2", "Apples are rich in antioxidants, which may help protect against heart disease and cancer. They're also a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("banana", "89", "1.1", "23.0", "0.3", "Bananas are a good source of potassium, which can help lower blood pressure. They're also a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("orange", "47", "0.9", "11.8", "0.1", "Oranges are a good source of vitamin C, which can help boost your immune system. They're also a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("grape", "69", "0.7", "18.1", "0.3", "Grapes are a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("watermelon", "30", "0.6", "7.7", "0.2", "Watermelon is a good source of vitamin A, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("melon", "30", "0.6", "7.7", "0.2", "Watermelon is a good source of vitamin A, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("mango", "60", "0.6", "15.0", "0.2", "Mango is a good source of vitamin A, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("coconut", "717", "0.8", "0.1", "81.1", "Coconut is a good source of fat, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("pineapple", "50", "0.5", "13.6", "0.1", "Pineapple is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("strawberry", "32", "0.7", "7.7", "0.3", "Strawberry is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("rice", "130", "2.7", "28.0", "0.4", "Rice is a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("bread", "64", "2.4", "11.3", "0.6", "Bread is a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("pasta", "131", "5.5", "23.0", "1.5", "Pasta is a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("potato", "77", "2.0", "17.4", "0.1", "Potatoes are a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("tomato", "18", "0.9", "3.9", "0.2", "Tomatoes are a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("egg", "155", "12.7", "1.1", "11.0", "Eggs are a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("milk", "42", "3.3", "4.6", "1.9", "Milk is a good source of calcium, which can help build strong bones and teeth."));
-        dataFoods.add(new DataFoods("cheese", "402", "25.0", "2.0", "33.0", "Cheese is a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("butter", "717", "0.8", "0.1", "81.1", "Butter is a good source of fat, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("oil", "717", "0.8", "0.1", "81.1", "Oil is a good source of fat, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("yogurt", "59", "4.4", "4.9", "0.1", "Yogurt is a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("chicken", "239", "31.6", "0.0", "10.6", "Chicken is a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("meat", "239", "31.6", "0.0", "10.6", "Meat is a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("pork", "239", "31.6", "0.0", "10.6", "Pork is a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("beef", "239", "31.6", "0.0", "10.6", "Beef is a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("fish", "208", "19.9", "0.0", "13.6", "Fish is a good source of protein, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("chocklate", "717", "0.8", "0.1", "81.1", "Chocklate is a good source of fat, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("sugar", "717", "0.8", "0.1", "81.1", "Sugar is a good source of fat, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("salt", "717", "0.8", "0.1", "81.1", "Salt is a good source of fat, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("pepper", "717", "0.8", "0.1", "81.1", "Pepper is a good source of fat, which can help you feel full and boost your metabolism."));
-        dataFoods.add(new DataFoods("carrot", "41", "0.9", "9.6", "0.2", "Carrot is a good source of vitamin A, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("onion", "40", "1.1", "9.3", "0.1", "Onion is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("cucumber", "16", "0.3", "3.7", "0.1", "Cucumber is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("lettuce", "15", "0.3", "3.6", "0.2", "Lettuce is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("broccoli", "34", "2.8", "7.0", "0.4", "Broccoli is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("spinach", "23", "2.9", "3.6", "0.4", "Spinach is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("cabbage", "25", "0.6", "5.7", "0.3", "Cabbage is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("cauliflower", "25", "1.1", "5.5", "0.3", "Cauliflower is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("beetroot", "43", "1.6", "9.4", "0.2", "Beetroot is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("garlic", "149", "6.0", "33.0", "0.6", "Garlic is a good source of vitamin C, which can help boost your immune system."));
-        dataFoods.add(new DataFoods("ginger", "63", "1.4", "14.8", "0.6", "Ginger is a good source of vitamin C, which can help boost your immune system."));
+        File file = new File("C:\\Users\\connect\\Desktop\\PC-Doctor-main\\PC-Doctor\\src\\main\\java\\Files\\Foods.txt");
+        try {
+            Scanner sc = new Scanner(file);
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                String[] data = line.split(",");
+                dataFoods.add(new DataFoods(data[0], data[1], data[2], data[3], data[4], data[5]));
+            }
+            sc.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
     
 //-----------------------------------------------------Main---------------------------------------------------------------
