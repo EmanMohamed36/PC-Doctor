@@ -388,7 +388,7 @@ public class Foods extends javax.swing.JFrame {
     public static List <DataFoods> dataFoods = new ArrayList<DataFoods>();
 
     public static void fillDataFoods() {
-        File file = new File(MainWindow.prefixPath + "/src/main/java/Files/Foods.txt");
+        File file = new File(MainWindow.prefixPath + "/src/main/java/files/Foods.txt");
         try {
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
