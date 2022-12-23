@@ -20,7 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.Timer;
-
+import java.io.File;
+import java.util.Scanner;
 
 /**
  *
@@ -32,6 +33,29 @@ public class Medicine extends javax.swing.JFrame {
      * Creates new form Medicine
      */
     public Medicine() {
+        String Name = "", rating = "", drug = "" , effects = "" , indc = "";
+        File fil = new File(MainWindow.prefixPath + "/src/main/java/files/med.txt");
+        try{
+            Scanner sc = new Scanner(fil);
+            while(sc.hasNextLine()){
+                Name = sc.nextLine();
+                rating = sc.nextLine();
+                rating = rating.replaceAll("#", "\n");
+                drug = sc.nextLine();
+                drug = drug.replaceAll("#", "\n");
+                effects = sc.nextLine();
+                effects = effects.replaceAll("#", "\n");
+                indc = sc.nextLine();
+                indc = indc.replaceAll("#", "\n");
+                map.put(Name, new String[]{rating,drug,effects,indc});
+            }
+            sc.close();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+
+
         initComponents();
     }
 
@@ -419,124 +443,7 @@ public class Medicine extends javax.swing.JFrame {
         
       public static Map< String , String[]> map = new HashMap<>();
    // public static String ll = new String() ;
-    static {
-              String rating = "", drug = "" , effects = "" , indc = "";
-              // first drug : 
-
-              rating = "Antibacterial";
-
-              drug = "For Adults: \n " +
-                      "500-750 mg 3 times a day for 7-10 days\n" +
-                      "For chilldren:\n " +
-                      "15-50 mg/kg/day\n";
-
-              effects = "Insomnia.\n" +
-                      "indigestion.\n" +
-                      "Metallic taste in the mouth.\n" +
-                      "Drowsiness.\n" +
-                      "Skin rash.\n" +
-                      "dark urine.\n" +
-                      "Headache.\n";
-
-              indc = "Blood poisoning treatment\n" +
-                      "Amoeba disease .\n" +
-                      "Bacterial colitis caused by Clostridium difficile.\n" +
-                      "Helicobacter pylori infection.\n" +
-                      "Trichomoniasis.\n" +
-                      "Giardia infection in the gastrointestinal tract.\n";
-
-              map.put("Flagyl" ,new String[]{rating , drug , effects , indc}); 
-              
-                 // secind drug 
-              rating = "A drug for diabetes";
-              drug = "\n⁕Initial dose: 100 mg orally once a day" +
-                       "\n⁕May increase to 300 mg orally once a day "
-                       + "\nfor additional glycemic control in patients who have"
-                       + "\ntolerated therapy "+
-                       "\nand who have an eGFR of 60 mL/min/1.73 m2 nor greater" + 
-                        "\n⁕Maximum dose: 300 mg/day";
-              
-              effects = "Most common side effets : "  + 
-                      "\n⁕Bladder pain" +
-                       "\n⁕Bloating" +
-                     "\n⁕Bloody or cloudy urine" +
-                   "\n⁕Decreased frequency or amount of urine" +
-                    "\n⁕Difficult, burning, or painful urination" +
-                     "\n⁕Discharge with a strong odor from the penis" +
-                    "\n⁕Frequent urge to urinate" +
-                    "\n⁕Increased thirst" +
-                     "\n ⁕Increased urge to urinate during the night";
-              
-              indc = "⁕Indicated as an adjunct to diet "
-                      + "\nand exercise to improve glycemic control" +
-                    "\n⁕Also indicated to reduce risk of" +
-                      "\n major adverse cardiovascular events in adults" +
-                          "\n⁕Indicated to reduce the risk of end-stage kidney disease (ESKD)"
-                      +"\nDoubling of serum creatinine " +
-                      "\ncardiovascular (CV) death ";
-              map.put("Canagliflozin" ,new String[]{rating , drug , effects , indc}); 
-              
-               // thired drug 
-              rating = "A nonsteroidal anti-inflammatory drug";
-              
-              drug = "⁕Children under 12 years:  "+
-                        "\n10-15 mg/kg orally once every 4 hours,"
-                        + "up to 60-80 mg/kg/day " +
-                         "\n⁕Children 12 years and older:  " +
-                            "\n325-650 mg orally/rectally once"
-                           + " every 4-6 hours as needed";
-              
-              effects = "⁕An upset stomach"+ 
-                      "\n⁕More significant side effects include stomach ulcers"
-                      + "\n⁕Stomach bleeding " + "\n⁕Worsening asthma" + 
-                      "\n⁕Bleeding risk is greater among those who are older" 
-                       + "\n⁕Drink alcohol";
-              
-              indc = "⁕Used to reduce : "+
-                      "\n⁕pain"+""
-                      + " \n⁕Fever" 
-                      + "\n⁕Inflammation "
-                      + "\n⁕As an antithrombotic."
-                      + "\n⁕Treat include Kawasaki disease"
-                      + "\n⁕pericarditis";
-              map.put("Aspirin" ,new String[]{rating , drug , effects , indc});
-               
-               // fourth drug 
-               rating = "Bicyclic phthalene derivative and selective serotonin reuptake inhibitor";
-              drug = " Recommended dose:\n" +
-                        "\n⁕ Depression: " + 
-                          "\n" +
-                          "  • Initial dose: 20 mg orally every other day." +
-                            "\n  • Increase to 40 mg/day after one week based on your doctor's recommendations." +
-                             "\n⁕ Alcoholism: " +
-                              "\n  • From 20: 40 mg each day ." +
-                              "\n⁕ Binge eating disorder: " +
-                               "\n  • From 20: 60 mg orally each day." +
-                               "\n⁕ Generalized anxiety disorder:" +
-                                "\n  • Initial dose: 10 mg orally daily." +
-                                 "\n  • It may increase to 40 mg orally daily." +
-                                 "\n⁕ Panic disorder: " +
-                                  "\n  • First dose: 20 mg orally daily." +
-                                  "\n   • Increase after one week to 40 mg/day if needed";
-              
-              effects = "⁕Drowsiness" +
-                        "\n⁕ Decreased or increased sexual desire or ability" +
-                             "\n⁕ Excessive sweating" +
-                                  "\n⁕ Nausea" +
-                                  "\n⁕ Dryness in the mouth" +
-                                   "\n⁕ Weight loss";
-              
-              indc = "Is uesd for treat : " 
-                      + "\n⁕ Depression" +
-                      "\n⁕ alcoholism"  + 
-                      "\n⁕ Binge eating disorder" + 
-                      "\n⁕ Generalized anxiety disorder"
-                      + "\n⁕ Panic disorder" +
-                      "\n ⁕ Obsessive-compulsive disorde";
-              map.put("Citalopram" ,new String[]{rating , drug , effects , indc});
-
-
-        }
+   
      public static   String correctans(String medc ) 
       {
           String word = medc.toLowerCase();
@@ -576,72 +483,7 @@ public class Medicine extends javax.swing.JFrame {
       
 }
 
-    static class Scanner {
-        StringTokenizer st;
-        BufferedReader br;
-
-        public Scanner(FileReader r) {
-            br = new BufferedReader(r);
-        }
-
-        public Scanner(InputStream s) {
-            br = new BufferedReader(new InputStreamReader(s));
-        }
-
-        public String next() throws IOException {
-            while (st == null || !st.hasMoreTokens())
-                st = new StringTokenizer(br.readLine());
-            return st.nextToken();
-        }
-
-        public int[] nextIntArr(int n) throws IOException {
-            int[] a = new int[n];
-            for (int i = 0; i < n; i++) {
-                a[i] = nextInt();
-            }
-            return a;
-        }
-
-        public int nextInt() throws IOException {
-            return Integer.parseInt(next());
-        }
-
-        public long nextLong() throws IOException {
-            return Long.parseLong(next());
-        }
-
-        public String nextLine() throws IOException {
-            return br.readLine();
-        }
-
-        public double nextDouble() throws IOException {
-            String x = next();
-            StringBuilder sb = new StringBuilder("0");
-            double res = 0, f = 1;
-            boolean dec = false, neg = false;
-            int start = 0;
-            if (x.charAt(0) == '-') {
-                neg = true;
-                start++;
-            }
-            for (int i = start; i < x.length(); i++)
-                if (x.charAt(i) == '.') {
-                    res = Long.parseLong(sb.toString());
-                    sb = new StringBuilder("0");
-                    dec = true;
-                } else {
-                    sb.append(x.charAt(i));
-                    if (dec)
-                        f *= 10;
-                }
-            res += Long.parseLong(sb.toString()) / f;
-            return res * (neg ? -1 : 1);
-        }
-
-        public boolean ready() throws IOException {
-            return br.ready();
-        }
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBandAid;
