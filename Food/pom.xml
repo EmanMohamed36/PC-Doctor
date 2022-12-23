@@ -18,5 +18,5 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>com.mycompany.pcdoctor.PcDoctor</exec.mainClass>
     </properties>
-    <name>FOOD</name>
+    <name>Food</name>
 </project>

@@ -6,7 +6,7 @@ package com.mycompany.medicine;
 
 /**
  *
- * @author Hp
+ * @author PC-Doctor
  */
 public class Medicine {
 

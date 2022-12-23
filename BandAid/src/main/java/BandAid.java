@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author EmanMohamed
+ * @author PC-Doctor
  */
 
 public class BandAid extends javax.swing.JFrame {
@@ -124,7 +124,9 @@ public class BandAid extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(170, 80));
         setPreferredSize(new java.awt.Dimension(1460, 800));
+        setResizable(false);
         setSize(new java.awt.Dimension(1352, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -157,7 +159,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnEpilepticFitActionPerformed(evt);
             }
         });
-        jPanel4.add(jbtnEpilepticFit, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 400, 300, 40));
+        jPanel4.add(jbtnEpilepticFit, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 400, 300, 40));
 
         jbtnSevereBleeding.setBackground(new java.awt.Color(153, 153, 153));
         jbtnSevereBleeding.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -168,7 +170,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnSevereBleedingActionPerformed(evt);
             }
         });
-        jPanel4.add(jbtnSevereBleeding, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 300, 40));
+        jPanel4.add(jbtnSevereBleeding, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 220, 300, 40));
 
         jbtnShortnessOfBreath.setBackground(new java.awt.Color(153, 153, 153));
         jbtnShortnessOfBreath.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -179,7 +181,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnShortnessOfBreathActionPerformed(evt);
             }
         });
-        jPanel4.add(jbtnShortnessOfBreath, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 310, -1, 41));
+        jPanel4.add(jbtnShortnessOfBreath, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 310, -1, 41));
 
         jbtnFainting.setBackground(new java.awt.Color(153, 153, 153));
         jbtnFainting.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -190,7 +192,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnFaintingActionPerformed(evt);
             }
         });
-        jPanel4.add(jbtnFainting, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 300, 40));
+        jPanel4.add(jbtnFainting, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 490, 300, 40));
 
         jbtnBurns.setBackground(new java.awt.Color(153, 153, 153));
         jbtnBurns.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -201,7 +203,7 @@ public class BandAid extends javax.swing.JFrame {
                 jbtnBurnsActionPerformed(evt);
             }
         });
-        jPanel4.add(jbtnBurns, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 580, 300, 40));
+        jPanel4.add(jbtnBurns, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 580, 300, 40));
 
         jPanel7.setBackground(new java.awt.Color(153, 153, 153));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 7));
@@ -254,7 +256,7 @@ public class BandAid extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 111, -1, -1));
+        jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
         jtxtYouShouldNotDo.setEditable(false);
         jtxtYouShouldNotDo.setColumns(20);
@@ -262,7 +264,7 @@ public class BandAid extends javax.swing.JFrame {
         jtxtYouShouldNotDo.setRows(5);
         jScrollPane1.setViewportView(jtxtYouShouldNotDo);
 
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 464, 760, 243));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 760, 243));
 
         jtxtYouShouldDo.setEditable(false);
         jtxtYouShouldDo.setColumns(20);
@@ -270,7 +272,7 @@ public class BandAid extends javax.swing.JFrame {
         jtxtYouShouldDo.setRows(5);
         jScrollPane3.setViewportView(jtxtYouShouldDo);
 
-        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 172, 760, 201));
+        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 760, 201));
 
         jPanel13.setBackground(new java.awt.Color(153, 153, 153));
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 7));
@@ -297,7 +299,7 @@ public class BandAid extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel4.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 391, -1, -1));
+        jPanel4.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1140, 740));
 
@@ -337,7 +339,6 @@ public class BandAid extends javax.swing.JFrame {
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,7 +350,6 @@ public class BandAid extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -361,7 +361,6 @@ public class BandAid extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
-        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -24,7 +24,7 @@ import java.util.Timer;
 
 /**
  *
- * @author aliya yasser
+ * @author PC-Doctor
  */
 public class Medicine extends javax.swing.JFrame {
 
@@ -76,7 +76,8 @@ public class Medicine extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(Color.WHITE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(1460, 800));
+        setLocation(new java.awt.Point(170, 80));
+        setResizable(false);
         setSize(new java.awt.Dimension(1352, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -131,7 +132,7 @@ public class Medicine extends javax.swing.JFrame {
 
         jtxtname1.setEditable(false);
         jtxtname1.setBackground(new java.awt.Color(204, 204, 204));
-        jtxtname1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtxtname1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jtxtname1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxtname1.setText("    ");
         jtxtname1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -144,7 +145,7 @@ public class Medicine extends javax.swing.JFrame {
 
         jtxtmedicationrating.setEditable(false);
         jtxtmedicationrating.setBackground(new java.awt.Color(204, 204, 204));
-        jtxtmedicationrating.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jtxtmedicationrating.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jtxtmedicationrating.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxtmedicationrating.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel6.add(jtxtmedicationrating, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 380, 45));
@@ -197,7 +198,7 @@ public class Medicine extends javax.swing.JFrame {
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
         jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
-        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Logo.jpg")); // NOI18N
         jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +224,7 @@ public class Medicine extends javax.swing.JFrame {
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Medicines.png")); // NOI18N
+        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,7 +236,7 @@ public class Medicine extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,7 +248,7 @@ public class Medicine extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
-        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC_DOCTOR/src/main/java/images/Food.png")); // NOI18N
+        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -280,7 +281,7 @@ public class Medicine extends javax.swing.JFrame {
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 170, 40));
 
         jsearch.setBackground(new java.awt.Color(16, 18, 23));
-        jsearch.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/Food/src/main/java/com/images/search2.jpg")); // NOI18N
+        jsearch.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/search.jpg")); // NOI18N
         jsearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -1,5 +1,9 @@
+import java.awt.Toolkit;
 import java.util.*;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,19 +11,29 @@ import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.text.PlainDocument;
 import javax.xml.crypto.Data;
 
 /**
  *
- * @author connect
+ * @author PC-Doctor
  */
 public class Foods extends javax.swing.JFrame {
 
     /**
      * Creates new form Foods
      */
+
     public Foods() {
         initComponents();
+        //jbtnLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/Logo.png")));
+        // jFoods.setIcon(jFoods);
+        // java.net.URL Medicine = getClass().getResource("Medicine.png");
+        // Icon Medicine1 = new ImageIcon(Medicine);
+        // java.net.URL BandAid = getClass().getResource("BandAid.png");
+        // Icon BandAid1 = new ImageIcon(BandAid);
+        // java.net.URL Logo = getClass().getResource("Logo.png");
+        // Icon Logo1 = new ImageIcon(Logo);
     }
 
     /**
@@ -56,6 +70,7 @@ public class Foods extends javax.swing.JFrame {
         jFoods = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(170, 80));
         setPreferredSize(new java.awt.Dimension(1460, 800));
         setResizable(false);
         setSize(new java.awt.Dimension(1352, 800));
@@ -74,6 +89,7 @@ public class Foods extends javax.swing.JFrame {
 
         jTextSearch.setBackground(new java.awt.Color(255, 255, 255));
         jTextSearch.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jTextSearch.setText(" ");
         jTextSearch.setBorder(null);
         jTextSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +99,7 @@ public class Foods extends javax.swing.JFrame {
         jPanel2.add(jTextSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 170, 40));
 
         jOkSearch.setBackground(new java.awt.Color(16, 18, 23));
-        jOkSearch.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/Food/src/main/java/com/images/search2.jpg")); // NOI18N
+        jOkSearch.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/search.jpg")); // NOI18N
         jOkSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jOkSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +151,7 @@ public class Foods extends javax.swing.JFrame {
         jcarb.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jcarb.setForeground(new java.awt.Color(0, 0, 0));
         jcarb.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jcarb.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Carb", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
+        jcarb.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Carbohydrate", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
         jcarb.setOpaque(true);
         jPanel6.add(jcarb, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 280, 130));
 
@@ -160,7 +176,7 @@ public class Foods extends javax.swing.JFrame {
 
         jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 1030, 160));
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 60, 1150, 750));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 60, 1140, 750));
 
         jPanel3.setBackground(new java.awt.Color(102, 0, 102));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -172,7 +188,7 @@ public class Foods extends javax.swing.JFrame {
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
         jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
-        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/MainWindow/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Logo.jpg")); // NOI18N
         jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,6 +214,7 @@ public class Foods extends javax.swing.JFrame {
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
+        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +226,7 @@ public class Foods extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
+        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,6 +238,7 @@ public class Foods extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
+        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,13 +251,6 @@ public class Foods extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jbtnLogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogoActionPerformed
-        // TODO add your handling code here:
-        MainWindow obj = new MainWindow();
-        obj.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jbtnLogoActionPerformed
 
     private void jbtnPC_DoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPC_DoctorActionPerformed
         // TODO add your handling code here:
@@ -263,6 +275,13 @@ public class Foods extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFoodsActionPerformed
 
+    private void jbtnLogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogoActionPerformed
+        // TODO add your handling code here:
+        MainWindow obj = new MainWindow();
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbtnLogoActionPerformed
+
     private void jTextSearchActionPerformed(java.awt.event.ActionEvent evt) {                                            
         jOkSearch.doClick();
     }
@@ -273,12 +292,13 @@ public class Foods extends javax.swing.JFrame {
         DataFoods similar = searchFoodSimilar(jTextSearch.getText().toLowerCase().trim());
         if(food != null || (similar != null && foundSimilar(similar) == true)){
             if(food == null) food = similar;
+            jTextSearch.setText(" " + food.name);
             food.name = food.name.substring(0, 1).toUpperCase() + food.name.substring(1);
             jname.setText(food.name);
-            jcalories.setText(food.Calories);
-            jprotein.setText(food.protein);
-            jcarb.setText(food.carb);
-            jfat.setText(food.fat);
+            jcalories.setText(food.Calories + " calories");
+            jprotein.setText(food.protein + " g");
+            jcarb.setText(food.carb + " g");
+            jfat.setText(food.fat + " g");
             jadvantage.setText(food.advantage);
         }
         else {
@@ -301,13 +321,13 @@ public class Foods extends javax.swing.JFrame {
         JFrame frame = new JFrame();
         String message = "Did you mean " + food.name + "?";
         int reply = JOptionPane.showConfirmDialog(frame, message, "Food not found!", JOptionPane.YES_NO_OPTION);
-        if (reply == JOptionPane.YES_OPTION) {
+        if(reply == JOptionPane.YES_OPTION){
             return true;
         }
         return false;
     }
 
-    public static DataFoods searchFood(String name) {
+    public static DataFoods searchFood(String name){
         for(DataFoods data : dataFoods){
             if (data.name.equals(name)){
                 return new DataFoods(data);
@@ -315,7 +335,7 @@ public class Foods extends javax.swing.JFrame {
         }
         return null;
     }
-    public static DataFoods searchFoodSimilar(String name) {
+    public static DataFoods searchFoodSimilar(String name){
         double max_same_chars = 0.0;
         DataFoods d = null;
         for (DataFoods data : dataFoods) {
@@ -368,23 +388,47 @@ public class Foods extends javax.swing.JFrame {
     public static List <DataFoods> dataFoods = new ArrayList<DataFoods>();
     // fill data
     public static void fillDataFoods() {
-        dataFoods.add(new DataFoods("apple", "52", "0.3", "13.8", "0.2", "Apples are rich in antioxidants, which may help protect against heart disease and cancer. They're also a good source of fiber, which can help keep you\nregular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("banana", "89", "1.1", "23.0", "0.3", "Bananas are a good source of potassium, which can help lower\nblood pressure.\nThey're also a good source of fiber, which can help keep you\nregular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("orange", "47", "0.9", "11.8", "0.1", "Oranges are a good source of vitamin C, which can help boost\nyour immune system.\nThey're also a good source of fiber, which can help keep you\nregular and lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("grape", "69", "0.7", "18.1", "0.3", "Grapes are a good source of fiber, which can help keep you regular\nand lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("watermelon", "30", "0.6", "7.7", "0.2", "Watermelon is a good source of vitamin A, which can help boost\nyour immune system."));
-        dataFoods.add(new DataFoods("melon", "30", "0.6", "7.7", "0.2", "Watermelon is a good source of vitamin A, which can help boost\nyour immune system."));
-        dataFoods.add(new DataFoods("rice", "130", "2.7", "28.0", "0.4", "Rice is a good source of fiber, which can help keep you regular\nand lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("bread", "64", "2.4", "11.3", "0.6", "Bread is a good source of fiber, which can help keep you regular\nand lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("pasta", "131", "5.5", "23.0", "1.5", "Pasta is a good source of fiber, which can help keep you regular\nand lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("potato", "77", "2.0", "17.4", "0.1", "Potatoes are a good source of fiber, which can help keep you regular\nand lower your risk of heart disease and diabetes."));
-        dataFoods.add(new DataFoods("tomato", "18", "0.9", "3.9", "0.2", "Tomatoes are a good source of vitamin C, which can help boost\nyour immune system."));
-        dataFoods.add(new DataFoods("egg", "155", "12.7", "1.1", "11.0", "Eggs are a good source of protein, which can help you feel full\nand boost your metabolism."));
-        dataFoods.add(new DataFoods("milk", "42", "3.3", "4.6", "1.9", "Milk is a good source of calcium, which can help build strong\nbones and teeth."));
-        dataFoods.add(new DataFoods("chicken", "239", "31.6", "0.0", "10.6", "Chicken is a good source of protein, which can help you feel\nfull and boost your metabolism."));
-        dataFoods.add(new DataFoods("meat", "239", "31.6", "0.0", "10.6", "Meat is a good source of protein, which can help you feel full\nand boost your metabolism."));
-        dataFoods.add(new DataFoods("fish", "208", "19.9", "0.0", "13.6", "Fish is a good source of protein, which can help you feel full\nand boost your metabolism."));
-        
+        dataFoods.add(new DataFoods("apple", "52", "0.3", "13.8", "0.2", "Apples are rich in antioxidants, which may help protect against heart disease and cancer. They're also a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("banana", "89", "1.1", "23.0", "0.3", "Bananas are a good source of potassium, which can help lower blood pressure. They're also a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("orange", "47", "0.9", "11.8", "0.1", "Oranges are a good source of vitamin C, which can help boost your immune system. They're also a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("grape", "69", "0.7", "18.1", "0.3", "Grapes are a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("watermelon", "30", "0.6", "7.7", "0.2", "Watermelon is a good source of vitamin A, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("melon", "30", "0.6", "7.7", "0.2", "Watermelon is a good source of vitamin A, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("mango", "60", "0.6", "15.0", "0.2", "Mango is a good source of vitamin A, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("coconut", "717", "0.8", "0.1", "81.1", "Coconut is a good source of fat, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("pineapple", "50", "0.5", "13.6", "0.1", "Pineapple is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("strawberry", "32", "0.7", "7.7", "0.3", "Strawberry is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("rice", "130", "2.7", "28.0", "0.4", "Rice is a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("bread", "64", "2.4", "11.3", "0.6", "Bread is a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("pasta", "131", "5.5", "23.0", "1.5", "Pasta is a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("potato", "77", "2.0", "17.4", "0.1", "Potatoes are a good source of fiber, which can help keep you regular and lower your risk of heart disease and diabetes."));
+        dataFoods.add(new DataFoods("tomato", "18", "0.9", "3.9", "0.2", "Tomatoes are a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("egg", "155", "12.7", "1.1", "11.0", "Eggs are a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("milk", "42", "3.3", "4.6", "1.9", "Milk is a good source of calcium, which can help build strong bones and teeth."));
+        dataFoods.add(new DataFoods("cheese", "402", "25.0", "2.0", "33.0", "Cheese is a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("butter", "717", "0.8", "0.1", "81.1", "Butter is a good source of fat, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("oil", "717", "0.8", "0.1", "81.1", "Oil is a good source of fat, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("yogurt", "59", "4.4", "4.9", "0.1", "Yogurt is a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("chicken", "239", "31.6", "0.0", "10.6", "Chicken is a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("meat", "239", "31.6", "0.0", "10.6", "Meat is a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("pork", "239", "31.6", "0.0", "10.6", "Pork is a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("beef", "239", "31.6", "0.0", "10.6", "Beef is a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("fish", "208", "19.9", "0.0", "13.6", "Fish is a good source of protein, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("chocklate", "717", "0.8", "0.1", "81.1", "Chocklate is a good source of fat, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("sugar", "717", "0.8", "0.1", "81.1", "Sugar is a good source of fat, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("salt", "717", "0.8", "0.1", "81.1", "Salt is a good source of fat, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("pepper", "717", "0.8", "0.1", "81.1", "Pepper is a good source of fat, which can help you feel full and boost your metabolism."));
+        dataFoods.add(new DataFoods("carrot", "41", "0.9", "9.6", "0.2", "Carrot is a good source of vitamin A, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("onion", "40", "1.1", "9.3", "0.1", "Onion is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("cucumber", "16", "0.3", "3.7", "0.1", "Cucumber is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("lettuce", "15", "0.3", "3.6", "0.2", "Lettuce is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("broccoli", "34", "2.8", "7.0", "0.4", "Broccoli is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("spinach", "23", "2.9", "3.6", "0.4", "Spinach is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("cabbage", "25", "0.6", "5.7", "0.3", "Cabbage is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("cauliflower", "25", "1.1", "5.5", "0.3", "Cauliflower is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("beetroot", "43", "1.6", "9.4", "0.2", "Beetroot is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("garlic", "149", "6.0", "33.0", "0.6", "Garlic is a good source of vitamin C, which can help boost your immune system."));
+        dataFoods.add(new DataFoods("ginger", "63", "1.4", "14.8", "0.6", "Ginger is a good source of vitamin C, which can help boost your immune system."));
     }
     
 //-----------------------------------------------------Main---------------------------------------------------------------
@@ -441,4 +485,28 @@ public class Foods extends javax.swing.JFrame {
     private javax.swing.JLabel jname;
     private javax.swing.JLabel jprotein;
     // End of variables declaration//GEN-END:variables
+
+//-----------------------------------------------------Icon---------------------------------------------------------------   
+    /*java.net.URL Food = getClass().getResource("Food.png");
+    Icon Food1 = new ImageIcon(Food);
+    java.net.URL Medicine = getClass().getResource("Medicine.png");
+    Icon Medicine1 = new ImageIcon(Medicine);
+    java.net.URL BandAid = getClass().getResource("BandAid.png");
+    Icon BandAid1 = new ImageIcon(BandAid);
+    java.net.URL Logo = getClass().getResource("Logo.png");
+    Icon Logo1 = new ImageIcon(Logo);*/
+
 }
+
+// java.net.URL alert = getClass().getResource("alert.jpg");
+// Icon alert1 = new ImageIcon(alert);
+// java.net.URL insuf = getClass().getResource("insuf.jpg");
+// Icon insuf1 = new ImageIcon(insuf);
+// java.net.URL inva = getClass().getResource("inva.jpg");
+// Icon inva1 = new ImageIcon(inva);
+// URL see = getClass().getResource("see.jpg");
+// Icon see1 = new ImageIcon(see);
+// java.net.URL tap = getClass().getResource("tap.jpg");
+// Icon tap1 = new ImageIcon(tap);
+// java.net.URL wel = getClass().getResource("wel.jpg");
+// Icon wel1 = new ImageIcon(wel);

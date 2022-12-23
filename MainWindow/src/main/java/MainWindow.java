@@ -5,7 +5,7 @@
 
 /**
  *
- * @author anwar
+ * @author PC-Doctor
  */
 public class MainWindow extends javax.swing.JFrame {
 
@@ -47,6 +47,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(170, 80));
         setResizable(false);
         setSize(new java.awt.Dimension(1352, 800));
 
