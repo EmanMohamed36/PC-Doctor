@@ -73,6 +73,7 @@ public class BandAid extends javax.swing.JFrame {
         jMedicines = new javax.swing.JButton();
         jBandAid = new javax.swing.JButton();
         jFoods = new javax.swing.JButton();
+        jbtnSystemLogin = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jfood = new javax.swing.JLabel();
 
@@ -316,7 +317,7 @@ public class BandAid extends javax.swing.JFrame {
         jPanel8.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
         jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
-        jbtnLogo.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath +"/src/main/java/images/Logo.jpg")); // NOI18N
         jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,7 +343,7 @@ public class BandAid extends javax.swing.JFrame {
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jMedicines.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Medicines.png")); // NOI18N
+        jMedicines.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath +"/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -354,7 +355,7 @@ public class BandAid extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath +"/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -366,7 +367,7 @@ public class BandAid extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
-        jFoods.setIcon(new javax.swing.ImageIcon("/home/anwar/NetBeansProjects/PC-Doctor/PC-Doctor/src/main/java/images/Food.png")); // NOI18N
+        jFoods.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath +"/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,6 +375,18 @@ public class BandAid extends javax.swing.JFrame {
             }
         });
         jPanel6.add(jFoods, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 270, -1));
+
+        jbtnSystemLogin.setBackground(new java.awt.Color(204, 204, 204));
+        jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
+        jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnSystemLogin.setText("System");
+        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnSystemLoginActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jbtnSystemLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 230, 70));
 
         getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 324, 800));
 
@@ -599,6 +612,12 @@ public class BandAid extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jFoodsActionPerformed
 
+    private void jbtnSystemLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSystemLoginActionPerformed
+        Login obj = new Login();
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbtnSystemLoginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -679,6 +698,7 @@ public class BandAid extends javax.swing.JFrame {
     private javax.swing.JButton jbtnPC_Doctor;
     private javax.swing.JButton jbtnSevereBleeding;
     private javax.swing.JButton jbtnShortnessOfBreath;
+    private javax.swing.JButton jbtnSystemLogin;
     private javax.swing.JLabel jfood;
     private javax.swing.JTextArea jtxtYouShouldDo;
     private javax.swing.JTextArea jtxtYouShouldNotDo;

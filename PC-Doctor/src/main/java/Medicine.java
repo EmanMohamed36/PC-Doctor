@@ -35,7 +35,7 @@ public class Medicine extends javax.swing.JFrame {
     public Medicine() {
         String Name = "", rating = "", drug = "" , effects = "" , indc = "";
         File fil = new File(MainWindow.prefixPath + "/src/main/java/files/med.txt");
-        try{
+        try {
             Scanner sc = new Scanner(fil);
             while(sc.hasNextLine()){
                 Name = sc.nextLine();
@@ -54,8 +54,6 @@ public class Medicine extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e);
         }
-
-
         initComponents();
     }
 
@@ -91,6 +89,7 @@ public class Medicine extends javax.swing.JFrame {
         jMedicines = new javax.swing.JButton();
         jBandAid = new javax.swing.JButton();
         jFoods = new javax.swing.JButton();
+        jbtnSystemLogin = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jfood = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -281,6 +280,18 @@ public class Medicine extends javax.swing.JFrame {
         });
         jPanel3.add(jFoods, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 270, -1));
 
+        jbtnSystemLogin.setBackground(new java.awt.Color(204, 204, 204));
+        jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
+        jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnSystemLogin.setText("System");
+        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnSystemLoginActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jbtnSystemLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 230, 70));
+
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 324, 800));
 
         jPanel1.setBackground(new java.awt.Color(189, 52, 72));
@@ -406,6 +417,12 @@ public class Medicine extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jsearchActionPerformed
 
+    private void jbtnSystemLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSystemLoginActionPerformed
+        Login obj = new Login();
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbtnSystemLoginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -509,6 +526,7 @@ public class Medicine extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextside2;
     private javax.swing.JButton jbtnLogo;
     private javax.swing.JButton jbtnPC_Doctor;
+    private javax.swing.JButton jbtnSystemLogin;
     private javax.swing.JLabel jfood;
     private javax.swing.JLabel jname5;
     private javax.swing.JButton jsearch;

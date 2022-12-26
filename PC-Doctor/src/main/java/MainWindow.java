@@ -5,7 +5,7 @@
 
 /**
  *
- * @author anwar
+ * @author PC-Doctor
  */
 public class MainWindow extends javax.swing.JFrame {
     static String prefixPath = System.getProperty("user.dir");
@@ -13,8 +13,8 @@ public class MainWindow extends javax.swing.JFrame {
      * Creates new form MainWindow
      */
     public MainWindow() {
+        //System.out.println(prefixPath);
         prefixPath = prefixPath.replaceAll("\\\\", "/");
-        System.out.println(prefixPath);
         initComponents();
     }
 
@@ -36,6 +36,7 @@ public class MainWindow extends javax.swing.JFrame {
         jMedicines = new javax.swing.JButton();
         jBandAid = new javax.swing.JButton();
         jFoods = new javax.swing.JButton();
+        jbtnSystemLogin = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -121,6 +122,18 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jFoods, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 270, -1));
+
+        jbtnSystemLogin.setBackground(new java.awt.Color(204, 204, 204));
+        jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
+        jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnSystemLogin.setText("System");
+        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnSystemLoginActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jbtnSystemLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 230, 70));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setName(""); // NOI18N
@@ -241,6 +254,12 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnPC_DoctorActionPerformed
 
+    private void jbtnSystemLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSystemLoginActionPerformed
+        Login obj = new Login();
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbtnSystemLoginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -297,5 +316,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JButton jbtnLogo;
     private javax.swing.JButton jbtnPC_Doctor;
+    private javax.swing.JButton jbtnSystemLogin;
     // End of variables declaration//GEN-END:variables
 }
