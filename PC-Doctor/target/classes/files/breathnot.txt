@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 1- any thing If the person is able to breathe hard, they should continue to cough.
+=======
+<<<<<<< HEAD
+1- any thing If the person is able to breathe hard, they should continue to cough.
+=======
+1- any thing If the person is able to breathe hard, they should continue to cough.
+>>>>>>> fb4c2a4243637199e55198a853b7ba43acc162ab
+>>>>>>> cd41f52c670b23f67d0ee5b0724a9971f66ff518
