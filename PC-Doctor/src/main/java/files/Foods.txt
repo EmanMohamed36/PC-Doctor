@@ -39,4 +39,4 @@ sweet potato,86,0.4,20.8,0.1,Sweet potatoes are a good source of fiber which can
 oatmeal,389,16.3,66.8,3.6,Oatmeal is a good source of fiber which can help keep you regular and lower your risk of heart disease and diabetes.
 pizza,300,12.5,38.5,10.5,Pizza is a good source of fiber which can help keep you regular and lower your risk of heart disease and diabetes.
 hamburger,250,12.5,0,27.5,Hamburgers are a good source of protein which can help you build and repair muscle. They're also a good source of vitamin B12 which can help keep your nervous system healthy.
-salad,15,0.4,3.6,0.1,Salads are a good source of vitamin C which can help boost your immune system. They're also a good source of fiber which can help keep you regular and lower your risk of heart disease and diabetes.
+salad,15,0.4,3.6,0.1,Salads are a good source of vitamin C which can help boost your immune system. They're also a good source of fiber which can help keep you regular and lower your risk of heart disease and diabetes.555555555555555555,404,02,21,12,cvvzvsfv
