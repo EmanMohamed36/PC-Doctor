@@ -339,6 +339,9 @@ public class AddFoods extends javax.swing.JFrame {
 
     private void jFoodsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFoodsActionPerformed
         // TODO add your handling code here:
+        Foods obj = new Foods();
+        obj.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jFoodsActionPerformed
 
     private void jbtnSystemLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSystemLoginActionPerformed
@@ -403,6 +406,18 @@ public class AddFoods extends javax.swing.JFrame {
         }
         return false;
     }
+    public static boolean isValidName(String name){
+        int count = 0;
+        for(int i = 0; i < name.length(); i++){
+            if(Character.isDigit(name.charAt(i))){
+                count++;
+            }
+        }
+        if(count == name.length()){
+            return false;
+        }
+        return true;
+    }
     private void jbtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddActionPerformed
         // TODO add your handling code here:
         String name = jName.getText().toLowerCase();
@@ -411,7 +426,11 @@ public class AddFoods extends javax.swing.JFrame {
         String fat = jFat.getText();
         String protein = jProtein.getText();
         String advantages = jAdvantages.getText();
-        if(isExist(name.toLowerCase())){
+        if(!isValidName(name)){
+            JOptionPane.showMessageDialog(null, "Please enter a valid name, it can't be only numbers");
+            return;
+        }
+        else if(isExist(name.toLowerCase())){
             JOptionPane.showMessageDialog(null, "This food already exists");
             return;
         }
@@ -423,6 +442,10 @@ public class AddFoods extends javax.swing.JFrame {
         }
         else if(advantages.contains(",")){
             JOptionPane.showMessageDialog(null, "Please do not use ',' in Advantages");
+            return;
+        }
+        else if(!isValidName(advantages)){
+            JOptionPane.showMessageDialog(null, "Please enter a valid Advantages, it can't be only numbers");
             return;
         }
         else {

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 1- Note the depletion in the shift.
 2- Protect people with seizures by removing any harmful objects near them and keeping them away from danger sources such as the stairs.
 3- Dimensions of the glasses the patient used.
 4- Support the person's head to prevent him from hitting the ground by placing a piece of cloth or a jacket.
 5- If the seizure lasts more than 5 minutes or more, an ambulance should be called.
+=======
+1- Note the depletion in the shift.
+2- Protect people with seizures by removing any harmful objects near them and keeping them away from danger sources such as the stairs.
+3- Dimensions of the glasses the patient used.
+4- Support the person's head to prevent him from hitting the ground by placing a piece of cloth or a jacket.
+5- If the seizure lasts more than 5 minutes or more, an ambulance should be called.
+>>>>>>> fb4c2a4243637199e55198a853b7ba43acc162ab

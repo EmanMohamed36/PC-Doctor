@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 1- Remove clothing or dirt from the wound area.
 2- Place a sterile bandage or piece of clean cloth over the wound.
 3- Press the bandage firmly with the palm of your hand to control bleeding.
 4- Secure the dressing with tape or maintain pressure with your hands.
 5- Immobilize the affected body part as much as possible.
+=======
+1- Remove clothing or dirt from the wound area.
+2- Place a sterile bandage or piece of clean cloth over the wound.
+3- Press the bandage firmly with the palm of your hand to control bleeding.
+4- Secure the dressing with tape or maintain pressure with your hands.
+5- Immobilize the affected body part as much as possible.
+>>>>>>> fb4c2a4243637199e55198a853b7ba43acc162ab

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 1- Protect the injured person from harm.
 2- Remove jewelry, belts, etc., especially around burned areas such as the neck.
 3- Take a pain reliever if necessary to relieve pain.
 4- Cover the burn area with a damp bandage or a clean, cool cloth.
 5- Cover open blisters with a dry, sterile bandage.
+=======
+1- Protect the injured person from harm.
+2- Remove jewelry, belts, etc., especially around burned areas such as the neck.
+3- Take a pain reliever if necessary to relieve pain.
+4- Cover the burn area with a damp bandage or a clean, cool cloth.
+5- Cover open blisters with a dry, sterile bandage.
+>>>>>>> fb4c2a4243637199e55198a853b7ba43acc162ab
