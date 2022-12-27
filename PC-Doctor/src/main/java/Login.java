@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author anwar
+ * @author PC-Doctor
  */
 public class Login extends javax.swing.JFrame {
 
@@ -17,6 +17,16 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         jbtnAddFoods.setEnabled(false);
         jbtnAddMedicines.setEnabled(false);
+    }
+    public Login(String adminName){
+        initComponents();
+        jUserName.setText(adminName);
+        jUserName.setEnabled(false);
+        jUserPassword.setEnabled(false);
+        jbtnLogin.setEnabled(false);
+        jbtnReset.setEnabled(false);
+        jLoginPanel.setBackground(new java.awt.Color(222, 225, 229));
+        jLabel6.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/colored-system.png"));
     }
 
     /**

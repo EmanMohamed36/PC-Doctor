@@ -19,11 +19,13 @@ public class AddMedicines extends javax.swing.JFrame {
     /**
      * Creates new form AddMedicines
      */
+    String _adminName = null;
     public AddMedicines() {
         initComponents();
     }
     public AddMedicines(String adminName){
         initComponents();
+        _adminName = adminName;
         adminName = adminName.substring(0, 1).toUpperCase() + adminName.substring(1).toLowerCase();
         jAdminName.setText("Welcome, " + adminName);
     }
@@ -57,6 +59,7 @@ public class AddMedicines extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jAdminName = new javax.swing.JTextField();
         jmedicines = new javax.swing.JLabel();
+        jbtnBack = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -236,6 +239,18 @@ public class AddMedicines extends javax.swing.JFrame {
         jmedicines.setText("Add Medicines");
         jPanel1.add(jmedicines, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
 
+        jbtnBack.setBackground(new java.awt.Color(51, 0, 0));
+        jbtnBack.setFont(new java.awt.Font("URW Gothic", 1, 24)); // NOI18N
+        jbtnBack.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnBack.setText("Back");
+        jbtnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jbtnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnBackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, 160, 60));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 1140, 60));
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
@@ -274,7 +289,7 @@ public class AddMedicines extends javax.swing.JFrame {
         jMedicines.setBackground(new java.awt.Color(255, 255, 255));
         jMedicines.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jMedicines.setForeground(new java.awt.Color(0, 0, 0));
-        jMedicines.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Medicines.png")); // NOI18N
+        jMedicines.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath +"/src/main/java/images/Medicines.png")); // NOI18N
         jMedicines.setText("  Medicines");
         jMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -286,7 +301,7 @@ public class AddMedicines extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath +"/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,7 +313,7 @@ public class AddMedicines extends javax.swing.JFrame {
         jFoods.setBackground(new java.awt.Color(255, 255, 255));
         jFoods.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jFoods.setForeground(new java.awt.Color(0, 0, 0));
-        jFoods.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Food.png")); // NOI18N
+        jFoods.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath +"/src/main/java/images/Food.png")); // NOI18N
         jFoods.setText("    Foods      ");
         jFoods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -344,7 +359,7 @@ public class AddMedicines extends javax.swing.JFrame {
         // TODO add your handling code here:
         Medicine obj = new Medicine();
         obj.setVisible(true);
-        obj.setVisible(false);
+        this.setVisible(false);
     }//GEN-LAST:event_jMedicinesActionPerformed
 
     private void jBandAidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBandAidActionPerformed
@@ -415,17 +430,17 @@ public class AddMedicines extends javax.swing.JFrame {
     private void jbtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddActionPerformed
         // TODO add your handling code here:
         String name = jName.getText().toLowerCase().trim();
-        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        if(name.length() >= 2) name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        else {
+            JOptionPane.showMessageDialog(null, "Name can't be less than 2 characters!");
+            return;
+        }
         String MedicationRating = jMedRate.getText();
         String DrugDosage = jDrugDosage.getText();
         String SideEffects = jSideEffects.getText();
         String Indications = jIndications.getText();
 
-        if(!isValidName(name)){
-            JOptionPane.showMessageDialog(null, "Please enter a valid name, it can't be only numbers");
-            return;
-        }
-        else if(isExist(name)){
+        if(isExist(name)){
             JOptionPane.showMessageDialog(null, "This Medicine already exists");
             return;
         }
@@ -433,6 +448,11 @@ public class AddMedicines extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Please fill all the fields");
             return;
         }
+        else if(!isValidName(name)){
+            JOptionPane.showMessageDialog(null, "Please enter a valid name, it can't be only numbers");
+            return;
+        }
+        
         else {
             try {
                 // write to file /home/anwar/PC-Doctor/PC-Doctor/src/main/java/files/Foods.txt in append mode
@@ -457,6 +477,13 @@ public class AddMedicines extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jbtnAddActionPerformed
+
+    private void jbtnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBackActionPerformed
+        Login obj = new Login(_adminName);
+        obj.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jbtnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -515,6 +542,7 @@ public class AddMedicines extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jSideEffects;
     private javax.swing.JButton jbtnAdd;
+    private javax.swing.JButton jbtnBack;
     private javax.swing.JButton jbtnLogo;
     private javax.swing.JButton jbtnPC_Doctor;
     private javax.swing.JButton jbtnReset;

@@ -17,17 +17,20 @@ import javax.swing.JOptionPane;
  *
  * @author PC-Doctor
  */
+
 public class AddFoods extends javax.swing.JFrame {
 
     /**
      * Creates new form AddFoods
      */
+    String _adminName = null;
 
     public AddFoods() {
         initComponents();
     }
     public AddFoods(String adminName) {
         initComponents();
+        _adminName = adminName;
         adminName = adminName.substring(0, 1).toUpperCase() + adminName.substring(1).toLowerCase();
         jAdminName.setText("Welcome, " + adminName);
     }
@@ -48,11 +51,12 @@ public class AddFoods extends javax.swing.JFrame {
         jFat = new javax.swing.JTextField();
         jProtein = new javax.swing.JTextField();
         jName = new javax.swing.JTextField();
-        jbtnReset = new javax.swing.JButton();
         jbtnAdd = new javax.swing.JButton();
+        jbtnReset = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jfood = new javax.swing.JLabel();
         jAdminName = new javax.swing.JTextField();
+        jbtnBack = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -74,6 +78,7 @@ public class AddFoods extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setForeground(new java.awt.Color(204, 204, 204));
         jPanel6.setName(""); // NOI18N
+        jPanel6.setPreferredSize(new java.awt.Dimension(1050, 720));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jAdvantages.setBackground(new java.awt.Color(241, 250, 238));
@@ -149,29 +154,29 @@ public class AddFoods extends javax.swing.JFrame {
         });
         jPanel6.add(jName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 280, 130));
 
-        jbtnReset.setBackground(new java.awt.Color(51, 51, 51));
-        jbtnReset.setFont(new java.awt.Font("URW Gothic", 1, 36)); // NOI18N
-        jbtnReset.setForeground(new java.awt.Color(255, 255, 255));
-        jbtnReset.setText("Reset");
-        jbtnReset.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jbtnReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnResetActionPerformed(evt);
-            }
-        });
-        jPanel6.add(jbtnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 580, 310, 80));
-
         jbtnAdd.setBackground(new java.awt.Color(0, 204, 51));
         jbtnAdd.setFont(new java.awt.Font("URW Gothic", 1, 36)); // NOI18N
         jbtnAdd.setForeground(new java.awt.Color(255, 255, 255));
         jbtnAdd.setText("Add");
-        jbtnAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jbtnAdd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jbtnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnAddActionPerformed(evt);
             }
         });
         jPanel6.add(jbtnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 580, 310, 80));
+
+        jbtnReset.setBackground(new java.awt.Color(51, 51, 51));
+        jbtnReset.setFont(new java.awt.Font("URW Gothic", 1, 36)); // NOI18N
+        jbtnReset.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnReset.setText("Reset");
+        jbtnReset.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jbtnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnResetActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jbtnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 580, 310, 80));
 
         getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 60, 1140, 740));
 
@@ -196,6 +201,18 @@ public class AddFoods extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jAdminName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 320, 60));
+
+        jbtnBack.setBackground(new java.awt.Color(51, 0, 51));
+        jbtnBack.setFont(new java.awt.Font("URW Gothic", 1, 24)); // NOI18N
+        jbtnBack.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnBack.setText("Back");
+        jbtnBack.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jbtnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnBackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, 160, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 0, 1140, -1));
 
@@ -247,7 +264,7 @@ public class AddFoods extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon("/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,7 +289,7 @@ public class AddFoods extends javax.swing.JFrame {
         jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
         jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
         jbtnSystemLogin.setText("System");
-        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSystemLoginActionPerformed(evt);
@@ -386,15 +403,11 @@ public class AddFoods extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jAdminNameActionPerformed
 
-    private void jbtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnResetActionPerformed
-        // TODO add your handling code here:
-        jName.setText(null);
-        jCalories.setText(null);
-        jCarbohydrates.setText(null);
-        jFat.setText(null);
-        jProtein.setText(null);
-        jAdvantages.setText(null);
-    }//GEN-LAST:event_jbtnResetActionPerformed
+    private void jbtnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBackActionPerformed
+        Login obj = new Login(_adminName);
+        obj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbtnBackActionPerformed
 
     private void jbtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddActionPerformed
         // TODO add your handling code here:
@@ -404,7 +417,12 @@ public class AddFoods extends javax.swing.JFrame {
         String fat = jFat.getText();
         String protein = jProtein.getText();
         String advantages = jAdvantages.getText();
-        if(!isValidName(name)){
+        
+        if(name.length() < 2){
+            JOptionPane.showMessageDialog(null, "Name can't be less than 2 characters!");
+            return;
+        }
+        else if(!isValidName(name)){
             JOptionPane.showMessageDialog(null, "Please enter a valid name, it can't be only numbers");
             return;
         }
@@ -414,6 +432,7 @@ public class AddFoods extends javax.swing.JFrame {
         }
         else if(name.isEmpty() || calories.isEmpty() || protein.isEmpty() || fat.isEmpty() || carbohydrates.isEmpty() || advantages.isEmpty()){
             JOptionPane.showMessageDialog(null, "Please fill all the fields");
+            return;
         }
         else if(isValid(calories, "Calories") == "error" || isValid(protein, "Protein") == "error" || isValid(fat, "Fat") == "error" || isValid(carbohydrates, "Carbohydrates") == "error"){
             return;
@@ -442,6 +461,16 @@ public class AddFoods extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jbtnAddActionPerformed
+
+    private void jbtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnResetActionPerformed
+        // TODO add your handling code here:
+        jName.setText(null);
+        jCalories.setText(null);
+        jProtein.setText(null);
+        jFat.setText(null);
+        jCarbohydrates.setText(null);
+        jAdvantages.setText(null);
+    }//GEN-LAST:event_jbtnResetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -497,6 +526,7 @@ public class AddFoods extends javax.swing.JFrame {
     private javax.swing.JTextField jProtein;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbtnAdd;
+    private javax.swing.JButton jbtnBack;
     private javax.swing.JButton jbtnLogo;
     private javax.swing.JButton jbtnPC_Doctor;
     private javax.swing.JButton jbtnReset;
