@@ -1,6 +1,0 @@
-anwar,admin
-efraim,admin
-mina,admin
-aliya,admin
-shahd,admin
-eman,admin

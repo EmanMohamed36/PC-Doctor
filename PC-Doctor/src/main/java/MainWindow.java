@@ -127,7 +127,7 @@ public class MainWindow extends javax.swing.JFrame {
         jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
         jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
         jbtnSystemLogin.setText("System");
-        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSystemLoginActionPerformed(evt);

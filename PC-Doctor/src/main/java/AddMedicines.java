@@ -8,29 +8,26 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+import com.sun.tools.javac.Main;
 
 /**
  *
  * @author PC-Doctor
  */
-public class AddFoods extends javax.swing.JFrame {
+public class AddMedicines extends javax.swing.JFrame {
 
     /**
-     * Creates new form AddFoods
+     * Creates new form AddMedicines
      */
-
-    public AddFoods() {
+    public AddMedicines() {
         initComponents();
     }
-    public AddFoods(String adminName) {
+    public AddMedicines(String adminName){
         initComponents();
         adminName = adminName.substring(0, 1).toUpperCase() + adminName.substring(1).toLowerCase();
         jAdminName.setText("Welcome, " + adminName);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,18 +38,25 @@ public class AddFoods extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel6 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jAdvantages = new javax.swing.JTextArea();
-        jCarbohydrates = new javax.swing.JTextField();
-        jCalories = new javax.swing.JTextField();
-        jFat = new javax.swing.JTextField();
-        jProtein = new javax.swing.JTextField();
+        jDrugDosageLabel = new javax.swing.JLabel();
+        jIndicationsLabel = new javax.swing.JLabel();
+        jsideEffectsLabel = new javax.swing.JLabel();
+        jmedLabel = new javax.swing.JLabel();
         jName = new javax.swing.JTextField();
+        jMedRate = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jIndications = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jDrugDosage = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jSideEffects = new javax.swing.JTextArea();
         jbtnReset = new javax.swing.JButton();
         jbtnAdd = new javax.swing.JButton();
+        jnameLabel1 = new javax.swing.JLabel();
+        jnameLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jfood = new javax.swing.JLabel();
         jAdminName = new javax.swing.JTextField();
+        jmedicines = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -66,122 +70,152 @@ public class AddFoods extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(170, 80));
-        setPreferredSize(new java.awt.Dimension(1460, 800));
         setResizable(false);
         setSize(new java.awt.Dimension(1352, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setForeground(new java.awt.Color(204, 204, 204));
-        jPanel6.setName(""); // NOI18N
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jAdvantages.setBackground(new java.awt.Color(241, 250, 238));
-        jAdvantages.setColumns(20);
-        jAdvantages.setFont(new java.awt.Font("FreeSans", 0, 24)); // NOI18N
-        jAdvantages.setForeground(new java.awt.Color(0, 0, 0));
-        jAdvantages.setLineWrap(true);
-        jAdvantages.setRows(5);
-        jAdvantages.setWrapStyleWord(true);
-        jAdvantages.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Advantages", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 1, 24), new java.awt.Color(102, 0, 102))); // NOI18N
-        jAdvantages.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jScrollPane1.setViewportView(jAdvantages);
+        jDrugDosageLabel.setBackground(new java.awt.Color(204, 204, 204));
+        jDrugDosageLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jDrugDosageLabel.setForeground(new java.awt.Color(0, 0, 0));
+        jDrugDosageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jDrugDosageLabel.setText("Drug Dosage:");
+        jDrugDosageLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jDrugDosageLabel.setOpaque(true);
+        jPanel6.add(jDrugDosageLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 250, 45));
 
-        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 1030, 160));
+        jIndicationsLabel.setBackground(new java.awt.Color(204, 204, 204));
+        jIndicationsLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jIndicationsLabel.setForeground(new java.awt.Color(0, 0, 0));
+        jIndicationsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jIndicationsLabel.setText("  Indications:");
+        jIndicationsLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jIndicationsLabel.setOpaque(true);
+        jPanel6.add(jIndicationsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 210, 45));
 
-        jCarbohydrates.setBackground(new java.awt.Color(241, 250, 238));
-        jCarbohydrates.setFont(new java.awt.Font("FreeSans", 1, 24)); // NOI18N
-        jCarbohydrates.setForeground(new java.awt.Color(0, 0, 0));
-        jCarbohydrates.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jCarbohydrates.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "carbohydrates", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
-        jCarbohydrates.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCarbohydratesActionPerformed(evt);
-            }
-        });
-        jPanel6.add(jCarbohydrates, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 280, 130));
+        jsideEffectsLabel.setBackground(new java.awt.Color(204, 204, 204));
+        jsideEffectsLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jsideEffectsLabel.setForeground(new java.awt.Color(0, 0, 0));
+        jsideEffectsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jsideEffectsLabel.setText("  Side Effects:");
+        jsideEffectsLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jsideEffectsLabel.setOpaque(true);
+        jPanel6.add(jsideEffectsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 210, 45));
 
-        jCalories.setBackground(new java.awt.Color(241, 250, 238));
-        jCalories.setFont(new java.awt.Font("FreeSans", 1, 24)); // NOI18N
-        jCalories.setForeground(new java.awt.Color(0, 0, 0));
-        jCalories.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jCalories.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Calories", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
-        jCalories.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCaloriesActionPerformed(evt);
-            }
-        });
-        jPanel6.add(jCalories, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 280, 130));
-
-        jFat.setBackground(new java.awt.Color(241, 250, 238));
-        jFat.setFont(new java.awt.Font("FreeSans", 1, 24)); // NOI18N
-        jFat.setForeground(new java.awt.Color(0, 0, 0));
-        jFat.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFat.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fat", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
-        jFat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFatActionPerformed(evt);
-            }
-        });
-        jPanel6.add(jFat, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 280, 130));
-
-        jProtein.setBackground(new java.awt.Color(241, 250, 238));
-        jProtein.setFont(new java.awt.Font("FreeSans", 1, 24)); // NOI18N
-        jProtein.setForeground(new java.awt.Color(0, 0, 0));
-        jProtein.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jProtein.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Protein", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
-        jProtein.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jProteinActionPerformed(evt);
-            }
-        });
-        jPanel6.add(jProtein, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 40, 280, 130));
+        jmedLabel.setBackground(new java.awt.Color(204, 204, 204));
+        jmedLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jmedLabel.setForeground(new java.awt.Color(0, 0, 0));
+        jmedLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jmedLabel.setText("Medication Rating:");
+        jmedLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jmedLabel.setOpaque(true);
+        jPanel6.add(jmedLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 300, 45));
 
         jName.setBackground(new java.awt.Color(241, 250, 238));
-        jName.setFont(new java.awt.Font("FreeSans", 1, 24)); // NOI18N
-        jName.setForeground(new java.awt.Color(0, 0, 0));
+        jName.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jName.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Name", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Liberation Sans", 1, 24), new java.awt.Color(102, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Liberation Sans", 0, 15), new java.awt.Color(102, 0, 102))); // NOI18N
+        jName.setText("    ");
+        jName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jNameActionPerformed(evt);
             }
         });
-        jPanel6.add(jName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 280, 130));
+        jPanel6.add(jName, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 250, 50));
+
+        jMedRate.setBackground(new java.awt.Color(241, 250, 238));
+        jMedRate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMedRate.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jMedRate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel6.add(jMedRate, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 410, 50));
+
+        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jIndications.setBackground(new java.awt.Color(241, 250, 238));
+        jIndications.setColumns(20);
+        jIndications.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jIndications.setForeground(new java.awt.Color(0, 0, 0));
+        jIndications.setLineWrap(true);
+        jIndications.setRows(5);
+        jIndications.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jIndications);
+
+        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 320, 330));
+
+        jScrollPane2.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jDrugDosage.setBackground(new java.awt.Color(241, 250, 238));
+        jDrugDosage.setColumns(20);
+        jDrugDosage.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jDrugDosage.setForeground(new java.awt.Color(0, 0, 0));
+        jDrugDosage.setLineWrap(true);
+        jDrugDosage.setRows(5);
+        jDrugDosage.setWrapStyleWord(true);
+        jScrollPane2.setViewportView(jDrugDosage);
+
+        jPanel6.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 120, 340, 390));
+
+        jScrollPane3.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jSideEffects.setBackground(new java.awt.Color(241, 250, 238));
+        jSideEffects.setColumns(20);
+        jSideEffects.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jSideEffects.setForeground(new java.awt.Color(0, 0, 0));
+        jSideEffects.setLineWrap(true);
+        jSideEffects.setRows(5);
+        jSideEffects.setWrapStyleWord(true);
+        jScrollPane3.setViewportView(jSideEffects);
+
+        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 320, 330));
 
         jbtnReset.setBackground(new java.awt.Color(51, 51, 51));
         jbtnReset.setFont(new java.awt.Font("URW Gothic", 1, 36)); // NOI18N
         jbtnReset.setForeground(new java.awt.Color(255, 255, 255));
         jbtnReset.setText("Reset");
-        jbtnReset.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jbtnReset.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jbtnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnResetActionPerformed(evt);
             }
         });
-        jPanel6.add(jbtnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 580, 310, 80));
+        jPanel6.add(jbtnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 620, 310, 80));
 
         jbtnAdd.setBackground(new java.awt.Color(0, 204, 51));
         jbtnAdd.setFont(new java.awt.Font("URW Gothic", 1, 36)); // NOI18N
         jbtnAdd.setForeground(new java.awt.Color(255, 255, 255));
         jbtnAdd.setText("Add");
-        jbtnAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jbtnAdd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jbtnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnAddActionPerformed(evt);
             }
         });
-        jPanel6.add(jbtnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 580, 310, 80));
+        jPanel6.add(jbtnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 620, 310, 80));
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 60, 1140, 740));
+        jnameLabel1.setBackground(new java.awt.Color(204, 204, 204));
+        jnameLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jnameLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jnameLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jnameLabel1.setText("Name: ");
+        jnameLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jnameLabel1.setOpaque(true);
+        jPanel6.add(jnameLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 140, 45));
+
+        jnameLabel2.setBackground(new java.awt.Color(204, 204, 204));
+        jnameLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jnameLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jnameLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jnameLabel2.setText("Name: ");
+        jnameLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
+        jnameLabel2.setOpaque(true);
+        jPanel6.add(jnameLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 140, 45));
+
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1140, 740));
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jfood.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jfood.setForeground(new java.awt.Color(153, 0, 153));
-        jfood.setText("Add Foods");
-        jPanel1.add(jfood, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 220, -1));
 
         jAdminName.setEditable(false);
         jAdminName.setBackground(new java.awt.Color(153, 153, 153));
@@ -197,7 +231,12 @@ public class AddFoods extends javax.swing.JFrame {
         });
         jPanel1.add(jAdminName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 320, 60));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 0, 1140, -1));
+        jmedicines.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jmedicines.setForeground(new java.awt.Color(189, 52, 72));
+        jmedicines.setText("Add Medicines");
+        jPanel1.add(jmedicines, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 1140, 60));
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -247,7 +286,7 @@ public class AddFoods extends javax.swing.JFrame {
         jBandAid.setBackground(new java.awt.Color(246, 249, 254));
         jBandAid.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBandAid.setForeground(new java.awt.Color(0, 0, 0));
-        jBandAid.setIcon(new javax.swing.ImageIcon("/src/main/java/images/BandAid.png")); // NOI18N
+        jBandAid.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/BandAid.png")); // NOI18N
         jBandAid.setText("   Band Aid ");
         jBandAid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,7 +311,7 @@ public class AddFoods extends javax.swing.JFrame {
         jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
         jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
         jbtnSystemLogin.setText("System");
-        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSystemLoginActionPerformed(evt);
@@ -280,10 +319,14 @@ public class AddFoods extends javax.swing.JFrame {
         });
         jPanel3.add(jbtnSystemLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 690, 230, 70));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 800));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 324, 800));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNameActionPerformed
 
     private void jbtnLogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogoActionPerformed
         // TODO add your handling code here:
@@ -301,7 +344,7 @@ public class AddFoods extends javax.swing.JFrame {
         // TODO add your handling code here:
         Medicine obj = new Medicine();
         obj.setVisible(true);
-        this.setVisible(false);
+        obj.setVisible(false);
     }//GEN-LAST:event_jMedicinesActionPerformed
 
     private void jBandAidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBandAidActionPerformed
@@ -324,46 +367,23 @@ public class AddFoods extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jbtnSystemLoginActionPerformed
 
-    private void jCarbohydratesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCarbohydratesActionPerformed
+    private void jAdminNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCarbohydratesActionPerformed
+    }//GEN-LAST:event_jAdminNameActionPerformed
 
-    private void jCaloriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCaloriesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCaloriesActionPerformed
 
-    private void jFatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFatActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFatActionPerformed
-
-    private void jProteinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jProteinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jProteinActionPerformed
-
-    private void jNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jNameActionPerformed
-    
-    public static String isValid(String val, String name){
-        try {
-            Double.parseDouble(val);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Please enter a valid number for " + name);
-            return "error";
-        }
-        return null;
-    }
-    //check if the food already exists in Foods.txt
+    //check if the Medicine already exists in med.txt
     public static boolean isExist(String name){
         try {
-            File file = new File(MainWindow.prefixPath + "/src/main/java/files/Foods.txt");
+            File file = new File(MainWindow.prefixPath + "/src/main/java/files/med.txt");
             Scanner sc = new Scanner(file);
             while(sc.hasNextLine()){
                 String line = sc.nextLine();
-                String[] arr = line.split(",");
-                if(arr[0].equals(name)){
-                    return true;
-                }
+                if(line.equals(name)) return true;
+                line = sc.nextLine();
+                line = sc.nextLine();
+                line = sc.nextLine();
+                line = sc.nextLine();
             }
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
@@ -382,56 +402,51 @@ public class AddFoods extends javax.swing.JFrame {
         }
         return true;
     }
-    private void jAdminNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jAdminNameActionPerformed
-
+    
     private void jbtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnResetActionPerformed
         // TODO add your handling code here:
         jName.setText(null);
-        jCalories.setText(null);
-        jCarbohydrates.setText(null);
-        jFat.setText(null);
-        jProtein.setText(null);
-        jAdvantages.setText(null);
+        jMedRate.setText(null);
+        jDrugDosage.setText(null);
+        jSideEffects.setText(null);
+        jIndications.setText(null);
     }//GEN-LAST:event_jbtnResetActionPerformed
 
     private void jbtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddActionPerformed
         // TODO add your handling code here:
-        String name = jName.getText().toLowerCase();
-        String calories = jCalories.getText();
-        String carbohydrates = jCarbohydrates.getText();
-        String fat = jFat.getText();
-        String protein = jProtein.getText();
-        String advantages = jAdvantages.getText();
+        String name = jName.getText().toLowerCase().trim();
+        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        String MedicationRating = jMedRate.getText();
+        String DrugDosage = jDrugDosage.getText();
+        String SideEffects = jSideEffects.getText();
+        String Indications = jIndications.getText();
+
         if(!isValidName(name)){
             JOptionPane.showMessageDialog(null, "Please enter a valid name, it can't be only numbers");
             return;
         }
-        else if(isExist(name.toLowerCase())){
-            JOptionPane.showMessageDialog(null, "This food already exists");
+        else if(isExist(name)){
+            JOptionPane.showMessageDialog(null, "This Medicine already exists");
             return;
         }
-        else if(name.isEmpty() || calories.isEmpty() || protein.isEmpty() || fat.isEmpty() || carbohydrates.isEmpty() || advantages.isEmpty()){
+        else if(name.isEmpty() || MedicationRating.isEmpty() || DrugDosage.isEmpty() || SideEffects.isEmpty() || Indications.isEmpty()){
             JOptionPane.showMessageDialog(null, "Please fill all the fields");
-        }
-        else if(isValid(calories, "Calories") == "error" || isValid(protein, "Protein") == "error" || isValid(fat, "Fat") == "error" || isValid(carbohydrates, "Carbohydrates") == "error"){
-            return;
-        }
-        else if(advantages.contains(",")){
-            JOptionPane.showMessageDialog(null, "Please do not use ',' in Advantages");
-            return;
-        }
-        else if(!isValidName(advantages)){
-            JOptionPane.showMessageDialog(null, "Please enter a valid Advantages, it can't be only numbers");
             return;
         }
         else {
             try {
                 // write to file /home/anwar/PC-Doctor/PC-Doctor/src/main/java/files/Foods.txt in append mode
-                FileWriter fw = new FileWriter(MainWindow.prefixPath + "/src/main/java/files/Foods.txt", true);
+                FileWriter fw = new FileWriter(MainWindow.prefixPath + "/src/main/java/files/med.txt", true);
                 BufferedWriter bw = new BufferedWriter(fw);
-                bw.write(name + "," + calories + "," + protein + "," + carbohydrates + "," + fat + "," + advantages);
+                bw.write(name);
+                bw.newLine();
+                bw.write(MedicationRating);
+                bw.newLine();
+                bw.write(DrugDosage);
+                bw.newLine();
+                bw.write(SideEffects);
+                bw.newLine();
+                bw.write(Indications);
                 bw.newLine();
                 bw.close();
                 fw.close();
@@ -460,47 +475,54 @@ public class AddFoods extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddFoods.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddMedicines.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddFoods.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddMedicines.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddFoods.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddMedicines.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddFoods.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddMedicines.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddFoods().setVisible(true);
+                new AddMedicines().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField jAdminName;
-    private javax.swing.JTextArea jAdvantages;
     private javax.swing.JButton jBandAid;
-    private javax.swing.JTextField jCalories;
-    private javax.swing.JTextField jCarbohydrates;
-    private javax.swing.JTextField jFat;
+    private javax.swing.JTextArea jDrugDosage;
+    private javax.swing.JLabel jDrugDosageLabel;
     private javax.swing.JButton jFoods;
+    private javax.swing.JTextArea jIndications;
+    private javax.swing.JLabel jIndicationsLabel;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField jMedRate;
     private javax.swing.JButton jMedicines;
     private javax.swing.JTextField jName;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JTextField jProtein;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextArea jSideEffects;
     private javax.swing.JButton jbtnAdd;
     private javax.swing.JButton jbtnLogo;
     private javax.swing.JButton jbtnPC_Doctor;
     private javax.swing.JButton jbtnReset;
     private javax.swing.JButton jbtnSystemLogin;
-    private javax.swing.JLabel jfood;
+    private javax.swing.JLabel jmedLabel;
+    private javax.swing.JLabel jmedicines;
+    private javax.swing.JLabel jnameLabel1;
+    private javax.swing.JLabel jnameLabel2;
+    private javax.swing.JLabel jsideEffectsLabel;
     // End of variables declaration//GEN-END:variables
 }

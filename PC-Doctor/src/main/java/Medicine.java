@@ -33,6 +33,7 @@ public class Medicine extends javax.swing.JFrame {
      * Creates new form Medicine
      */
     public Medicine() {
+        initComponents();
         String Name = "", rating = "", drug = "" , effects = "" , indc = "";
         File fil = new File(MainWindow.prefixPath + "/src/main/java/files/med.txt");
         try {
@@ -51,10 +52,9 @@ public class Medicine extends javax.swing.JFrame {
             }
             sc.close();
         }
-        catch(Exception e){
-            System.out.println(e);
+        catch(Exception ex){
+            //System.out.println("File not found");
         }
-        initComponents();
     }
 
     /**
@@ -115,7 +115,7 @@ public class Medicine extends javax.swing.JFrame {
         jMedicationrating‏.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
         jMedicationrating‏.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jMedicationrating‏.setOpaque(true);
-        jPanel6.add(jMedicationrating‏, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 270, 45));
+        jPanel6.add(jMedicationrating‏, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 270, 45));
 
         jDrugDosage.setBackground(new java.awt.Color(204, 204, 204));
         jDrugDosage.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -133,7 +133,7 @@ public class Medicine extends javax.swing.JFrame {
         jIndications.setText("  Indications:");
         jIndications.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
         jIndications.setOpaque(true);
-        jPanel6.add(jIndications, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 210, 45));
+        jPanel6.add(jIndications, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 210, 45));
 
         jSideEffects.setBackground(new java.awt.Color(204, 204, 204));
         jSideEffects.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -142,7 +142,7 @@ public class Medicine extends javax.swing.JFrame {
         jSideEffects.setText("  Side Effects:");
         jSideEffects.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
         jSideEffects.setOpaque(true);
-        jPanel6.add(jSideEffects, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 210, 45));
+        jPanel6.add(jSideEffects, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 210, 45));
 
         jname5.setBackground(new java.awt.Color(204, 204, 204));
         jname5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -151,7 +151,7 @@ public class Medicine extends javax.swing.JFrame {
         jname5.setText("Name: ");
         jname5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153), 2));
         jname5.setOpaque(true);
-        jPanel6.add(jname5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 140, 45));
+        jPanel6.add(jname5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 140, 45));
 
         jtxtname1.setEditable(false);
         jtxtname1.setBackground(new java.awt.Color(204, 204, 204));
@@ -164,14 +164,14 @@ public class Medicine extends javax.swing.JFrame {
                 jtxtname1ActionPerformed(evt);
             }
         });
-        jPanel6.add(jtxtname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 250, 45));
+        jPanel6.add(jtxtname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 250, 45));
 
         jtxtmedicationrating.setEditable(false);
         jtxtmedicationrating.setBackground(new java.awt.Color(204, 204, 204));
-        jtxtmedicationrating.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jtxtmedicationrating.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jtxtmedicationrating.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxtmedicationrating.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel6.add(jtxtmedicationrating, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 380, 45));
+        jPanel6.add(jtxtmedicationrating, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 410, 50));
 
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
@@ -183,7 +183,7 @@ public class Medicine extends javax.swing.JFrame {
         jTextindications.setRows(5);
         jScrollPane1.setViewportView(jTextindications);
 
-        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 320, 330));
+        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 320, 330));
 
         jScrollPane2.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
@@ -207,7 +207,7 @@ public class Medicine extends javax.swing.JFrame {
         jTextside2.setRows(5);
         jScrollPane3.setViewportView(jTextside2);
 
-        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 320, 330));
+        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 320, 330));
 
         getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1140, 740));
 
@@ -284,7 +284,7 @@ public class Medicine extends javax.swing.JFrame {
         jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
         jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
         jbtnSystemLogin.setText("System");
-        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSystemLoginActionPerformed(evt);
@@ -392,8 +392,8 @@ public class Medicine extends javax.swing.JFrame {
             if (answer == JOptionPane.YES_OPTION) {
                 String ans =  correctans(jTextField1.getText() );
 
-                jtxtname1.setText ( "     "+ans)  ;
-                jtxtmedicationrating.setText(map.get(ans)[0]) ;
+                jtxtname1.setText ( "     " + ans);
+                jtxtmedicationrating.setText(map.get(ans)[0]);
                 jTextindications.setText(map.get(ans)[3]) ;
                 jTextside2.setText(map.get(ans)[2]) ;
                 jTextdrugdosage.setText(map.get(ans)[1]) ;
@@ -461,7 +461,7 @@ public class Medicine extends javax.swing.JFrame {
       public static Map< String , String[]> map = new HashMap<>();
    // public static String ll = new String() ;
    
-     public static   String correctans(String medc ) 
+     public static String correctans(String medc ) 
       {
           String word = medc.toLowerCase();
            // pw.print("do you mean \" ");
@@ -488,19 +488,8 @@ public class Medicine extends javax.swing.JFrame {
                 }
             }
              return outword ;
-           // pw.println(word + "\" ?");
-           // String ok = sc.next();
-            //if(ok.equals("true")){
-              //  pw.println(map.get(outword)[0]); // بطبع التصنيف
-               // pw.println(map.get(outword)[1]); // بطبع الجرعه
-                //pw.println(map.get(outword)[2]); // بطبع الاعراض الجانبيه
-                //pw.println(map.get(outword)[3]); // بطبع دواعي الاستعمال
-            //else
-              //  pw.println("Please ,write medicine correctly...");
       
 }
-
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBandAid;

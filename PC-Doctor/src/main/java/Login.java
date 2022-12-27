@@ -247,7 +247,7 @@ public class Login extends javax.swing.JFrame {
         jbtnSystemLogin.setFont(new java.awt.Font("FreeMono", 1, 36)); // NOI18N
         jbtnSystemLogin.setForeground(new java.awt.Color(0, 0, 0));
         jbtnSystemLogin.setText("System");
-        jbtnSystemLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jbtnSystemLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jbtnSystemLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSystemLoginActionPerformed(evt);
@@ -304,7 +304,6 @@ public class Login extends javax.swing.JFrame {
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 line = sc.nextLine();
-                System.out.println(line + " " + user);
                 if (line.equals(user)) {
                     found = true;
                     jbtnAddFoods.setEnabled(true);
@@ -337,11 +336,15 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jUserPasswordActionPerformed
 
     private void jbtnSystemLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSystemLogin1ActionPerformed
-        // TODO add your handling code here:
+        Login obj = new Login();
+        obj.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbtnSystemLogin1ActionPerformed
 
     private void jbtnAddMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddMedicinesActionPerformed
-  
+        AddMedicines obj = new AddMedicines(jUserName.getText());
+        obj.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbtnAddMedicinesActionPerformed
 
     private void jbtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnReset1ActionPerformed
