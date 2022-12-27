@@ -317,7 +317,7 @@ public class BandAid extends javax.swing.JFrame {
         jPanel8.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 57, 102, -1));
 
         jbtnLogo.setBackground(new java.awt.Color(254, 254, 254));
-        jbtnLogo.setIcon(new javax.swing.ImageIcon("/src/main/java/images/Logo.jpg")); // NOI18N
+        jbtnLogo.setIcon(new javax.swing.ImageIcon(MainWindow.prefixPath + "/src/main/java/images/Logo.jpg")); // NOI18N
         jbtnLogo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         jbtnLogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
