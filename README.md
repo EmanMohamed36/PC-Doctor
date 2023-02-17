@@ -68,5 +68,5 @@ Made with ❤️ by:
 - [Efraim Nabil](https://github.com/efraimnabil)
 - [Anwar Rizk](https://github.com/Anwar-Rizk)
 - [Mina Magdy](https://github.com/MiinaMagdy)
-- [Shahd Mohamed]()
+- [Shahd Mohamed](https://github.com/ShahdElmeniawy)
 - [Aliaa Yasser]()
