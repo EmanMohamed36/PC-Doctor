@@ -50,9 +50,9 @@ git clone https://github.com/EmanMohamed36/PC-Doctor.git
     - Carbohydrates
     - Protein
 
-- System:
+- :gear: System:
         
-    Admin can add new medicines, foods.
+    Doctor can add new medicines, foods.
 
 ## Usage
 
