@@ -23,7 +23,7 @@ git clone https://github.com/EmanMohamed36/PC-Doctor.git
 
 ## Features
 
-- Medicines:
+- :pill: Medicines:
         
     You can search for any medicine and get all the information about it like:
     - Name
@@ -32,7 +32,7 @@ git clone https://github.com/EmanMohamed36/PC-Doctor.git
     - Side Effects
     - Indications
 
-- Band Aid:
+- :ambulance: Band Aid:
         
     In Band Aid, you will find advices about what you should do and what you shouldn't do in the case of:
     - Burns
@@ -41,7 +41,7 @@ git clone https://github.com/EmanMohamed36/PC-Doctor.git
     - Shortness of breath
     - Severe bleeding
 
-- Foods:
+- :green_apple: Foods:
         
     You can search for any food and get all the information about it like:
     - Name
